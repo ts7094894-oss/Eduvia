@@ -1,0 +1,8 @@
+{
+  "name": "EduPath — Learn. Grow. Get Hired.",
+  "description": "EduPath is an integrated e-learning and career platform where students can learn new skills, earn certificates, build resumes, prepare for placements, discover job opportunities, and apply for jobs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
