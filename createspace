@@ -1,0 +1,348 @@
+Work directly on my EXISTING EduPath repository.
+
+Repository:
+https://github.com/ts7094894-oss/Eduvia
+
+IMPORTANT:
+
+- Do NOT create a new project.
+- Do NOT rebuild the website from scratch.
+- Do NOT remove existing features.
+- Preserve the existing React + TypeScript + Vite architecture.
+- Inspect the existing source code before making changes.
+- Keep the current EduPath UI and functionality working.
+- Make changes directly to the existing files/components/data structures wherever possible.
+
+I want to add a REAL educational video learning system to the existing courses.
+
+COURSES:
+
+1. Python Programming
+2. Java Programming
+3. Web Development
+4. Data Structures & Algorithms
+5. Machine Learning
+6. DBMS
+7. Computer Networks
+8. Artificial Intelligence
+
+For each course, create a structured set of lessons/modules.
+
+Each lesson must have:
+
+- Lesson title
+- Description
+- Learning objectives
+- Difficulty
+- Duration
+- Video
+- Transcript
+- Key concepts
+- Quiz
+- Completion status
+
+REAL VIDEO REQUIREMENT:
+
+Students must actually be able to watch educational videos inside EduPath.
+
+Do NOT create fake video cards.
+Do NOT create "Coming Soon".
+Do NOT create an empty video player.
+Do NOT use a fake video URL.
+
+Create a proper video-learning architecture that supports actual MP4/WebM video files or authorized hosted video URLs.
+
+Use the existing public/ directory for demo video assets where appropriate:
+
+public/videos/
+
+Example:
+
+public/videos/python-introduction.mp4
+public/videos/python-variables.mp4
+public/videos/java-introduction.mp4
+
+If actual video files cannot be generated inside this coding environment, create the complete video architecture and clearly identify exactly which video assets need to be supplied. Do not pretend that nonexistent videos are real.
+
+AI VIDEO GENERATION:
+
+Create a provider-independent AI video system.
+
+The architecture should support:
+
+Lesson topic
+→ AI lesson script
+→ AI narration
+→ educational visuals
+→ generated video
+→ video storage
+→ EduPath lesson
+
+Create a video-generation service interface so an AI video provider can be connected later without rewriting the student learning interface.
+
+Use environment variables for API credentials.
+
+NEVER expose private API keys in frontend code.
+
+The student should never need an API key.
+
+VIDEO PLAYER:
+
+Add a professional video player to the lesson page with:
+
+- Play
+- Pause
+- Seek
+- Volume
+- Fullscreen
+- Playback speed
+- Duration
+- Current position
+- Captions
+- Transcript
+- Continue watching
+
+Use a real HTML5 video player or an appropriate React video component.
+
+VIDEO PROGRESS:
+
+Save:
+
+- student ID
+- course ID
+- module ID
+- lesson ID
+- watched seconds
+- percentage watched
+- last position
+- completed status
+
+Use the project's existing persistence/state architecture.
+
+If localStorage is currently used by the project, integrate with it rather than creating an unrelated storage system.
+
+When a student returns to a lesson, resume from the previous position.
+
+COURSE PROGRESS:
+
+Connect video completion to existing course progress.
+
+Example:
+
+Python Programming
+68% Complete
+
+17 / 25 lessons completed
+
+When the required lessons, quizzes and assignments are completed, integrate with the existing certificate functionality.
+
+AFTER VIDEO:
+
+Show:
+
+Lesson Summary
+What You Learned
+Important Concepts
+Transcript
+Quiz
+Next Lesson
+
+The quiz should be related to the actual lesson.
+
+COURSE STRUCTURE:
+
+Python:
+
+- Introduction
+- Variables and Data Types
+- Operators
+- Conditions
+- Loops
+- Functions
+- Lists and Dictionaries
+- OOP
+- File Handling
+- Mini Project
+
+Java:
+
+- Introduction
+- Variables
+- Conditions
+- Loops
+- Methods
+- OOP
+- Inheritance
+- Interfaces
+- Collections
+- Exception Handling
+- Mini Project
+
+Web Development:
+
+- HTML
+- CSS
+- JavaScript
+- DOM
+- Responsive Design
+- React
+- APIs
+- Authentication
+- Database Integration
+- Full Stack Project
+
+DSA:
+
+- Arrays
+- Strings
+- Linked Lists
+- Stacks
+- Queues
+- Recursion
+- Trees
+- Graphs
+- Sorting
+- Searching
+- Dynamic Programming
+
+Machine Learning:
+
+- ML Introduction
+- Data Preparation
+- Regression
+- Classification
+- Clustering
+- Feature Engineering
+- Model Evaluation
+- ML Projects
+
+DBMS:
+
+- Database Fundamentals
+- SQL
+- SELECT
+- INSERT/UPDATE/DELETE
+- Joins
+- Normalization
+- Transactions
+- Indexing
+- Database Design
+
+Computer Networks:
+
+- Networking Fundamentals
+- OSI Model
+- TCP/IP
+- IP Addressing
+- Subnetting
+- TCP and UDP
+- Routing
+- HTTP/HTTPS
+- Network Security Fundamentals
+
+Artificial Intelligence:
+
+- AI Fundamentals
+- Intelligent Agents
+- Search Algorithms
+- Knowledge Representation
+- Machine Learning
+- Neural Networks
+- Natural Language Processing
+- Computer Vision
+- AI Applications
+
+STUDENT EXPERIENCE:
+
+Dashboard
+→ My Courses
+→ Select Course
+→ Select Module
+→ Select Lesson
+→ Watch Video
+→ Read Transcript
+→ Complete Quiz
+→ Complete Lesson
+→ Next Lesson
+→ Course Completion
+→ Certificate
+→ Career/Job Recommendations
+
+TEACHER/ADMIN:
+
+Add an AI Video Management section where an authorized teacher/admin can:
+
+- Create lesson
+- Enter topic
+- Enter learning objectives
+- Generate lesson script
+- Generate video request
+- View generation status
+- Preview video
+- Publish video
+- Unpublish video
+
+Generation states:
+
+DRAFT
+GENERATING
+PROCESSING
+READY
+FAILED
+
+Do not show a "READY" status unless a real playable video URL exists.
+
+DESIGN:
+
+Follow the existing EduPath design system.
+
+Do not introduce an unrelated visual design.
+
+Keep the site responsive for:
+
+- Mobile
+- Tablet
+- Desktop
+
+SECURITY:
+
+- Never expose AI API secrets in client-side code.
+- Use environment variables.
+- Use a backend/server-side endpoint for secret API operations.
+- Do not commit .env files containing secrets.
+
+COPYRIGHT:
+
+Use only:
+
+- Original content
+- AI-generated content
+- User-provided content
+- Properly licensed/public-domain assets
+
+Do not copy or redistribute copyrighted educational videos.
+
+FINAL TESTING:
+
+Before finishing:
+
+1. Run npm install if required.
+2. Run the project's build command.
+3. Fix TypeScript errors.
+4. Fix routing errors.
+5. Verify existing pages still work.
+6. Verify courses still work.
+7. Verify the video player works with an actual supplied/test video.
+8. Verify video progress saving.
+9. Verify lesson completion.
+10. Verify quiz integration.
+11. Verify certificate integration.
+12. Verify mobile layout.
+13. Do not leave broken buttons or fake video URLs.
+
+Most importantly:
+
+This is an EXISTING EduPath project.
+
+Modify and extend it.
+Do not replace it.
