@@ -1,6 +1,6 @@
 import React from 'react';
 import { Course } from '../types';
-import { Star, Clock, Users, Bookmark, Play, CheckCircle } from 'lucide-react';
+import { Clock, Bookmark, Play, CheckCircle, BookOpen, Layers } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useData } from '../context/DataContext';
 import { useAuth } from '../context/AuthContext';
@@ -101,16 +101,15 @@ export const CourseCard: React.FC<CourseCardProps> = ({
       {/* Content */}
       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
         <div className="space-y-2">
-          {/* Rating and Students */}
+          {/* Real curriculum specs */}
           <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-            <div className="flex items-center gap-1 font-semibold text-amber-500">
-              <Star className="w-4 h-4 fill-current" />
-              <span>{course.rating.toFixed(1)}</span>
-              <span className="text-slate-400 font-normal">({course.reviews?.length || 120})</span>
+            <div className="flex items-center gap-1.5 font-medium text-slate-700 dark:text-slate-300">
+              <BookOpen className="w-3.5 h-3.5 text-indigo-500" />
+              <span>{course.totalLessons || course.modules?.reduce((acc, m) => acc + m.lessons.length, 0)} Lessons</span>
             </div>
-            <div className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
-              <Users className="w-3.5 h-3.5" />
-              <span>{course.studentsCount.toLocaleString()} students</span>
+            <div className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
+              <Layers className="w-3.5 h-3.5 text-emerald-500" />
+              <span>{course.modules?.length || 0} Modules</span>
             </div>
           </div>
 

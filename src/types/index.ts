@@ -20,15 +20,96 @@ export interface User {
   department?: string;
 }
 
+export interface VideoChapter {
+  id: string;
+  title: string;
+  timestamp: number; // in seconds
+  formattedTime: string; // e.g. "01:30"
+  description?: string;
+}
+
+export interface TranscriptLine {
+  id: string;
+  start: number; // in seconds
+  end: number; // in seconds
+  text: string;
+  speaker?: string;
+}
+
+export interface AILessonScript {
+  topic: string;
+  targetAudience?: string;
+  introduction: string;
+  conceptExplanation: string;
+  simpleExample: string;
+  codeDemonstration: {
+    language: string;
+    code: string;
+    explanation: string;
+    output?: string;
+  };
+  commonMistakes: string[];
+  practiceExample: string;
+  quickRecap: string;
+}
+
+export interface LessonQuizQuestion {
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+}
+
+export interface LessonResource {
+  id: string;
+  title: string;
+  size: string;
+  type: 'pdf' | 'code' | 'notes';
+  url?: string;
+}
+
+export interface VideoProgressRecord {
+  userId: string;
+  courseId: string;
+  lessonId: string;
+  watchedSeconds: number;
+  percentage: number;
+  completedStatus: boolean;
+  lastWatchedTimestamp: number;
+  durationSeconds: number;
+}
+
 export interface Lesson {
   id: string;
   title: string;
+  videoTitle?: string;
   duration: string;
+  durationSeconds?: number;
   videoUrl: string;
+  backupVideoUrl?: string;
+  youtubeVideoId?: string;
+  youtubeUrl?: string;
+  isVerifiedVideo?: boolean;
+  channelTitle?: string;
+  youtubeSearchQuery?: string;
+  videoThumbnail?: string;
+  videoTopic?: string;
   description?: string;
   completed?: boolean;
   notes?: string;
   freePreview?: boolean;
+  learningObjectives?: string[];
+  chapters?: VideoChapter[];
+  transcript?: TranscriptLine[];
+  script?: AILessonScript;
+  codeDemo?: {
+    language: string;
+    code: string;
+    output?: string;
+    explanation?: string;
+  };
+  miniQuiz?: LessonQuizQuestion[];
+  resources?: LessonResource[];
 }
 
 export interface CourseModule {

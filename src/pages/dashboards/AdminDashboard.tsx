@@ -49,10 +49,10 @@ export const AdminDashboard: React.FC = () => {
       {/* KPI Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <DashboardCard
-          title="Total Platform Users"
-          value="5,240"
+          title="Directory Accounts"
+          value={usersList.length}
           icon={<Users className="w-6 h-6" />}
-          description="Students, Faculty & Recruiters"
+          description="Verified role profiles"
           accentColor="indigo"
         />
         <DashboardCard
@@ -71,9 +71,9 @@ export const AdminDashboard: React.FC = () => {
         />
         <DashboardCard
           title="System Health"
-          value="99.98%"
+          value="Operational"
           icon={<Server className="w-6 h-6" />}
-          description="All microservices operational"
+          description="All platform services active"
           accentColor="amber"
         />
       </div>

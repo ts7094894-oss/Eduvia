@@ -179,7 +179,7 @@ export const PlacementPrep: React.FC = () => {
           }`}
         >
           <Code2 className="w-4 h-4" />
-          <span>DSA Coding Problems (100+)</span>
+          <span>DSA Coding Problems</span>
         </button>
 
         <button

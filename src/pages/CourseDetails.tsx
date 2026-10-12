@@ -22,6 +22,7 @@ import {
   Share2,
   Lock,
   Briefcase,
+  BookOpen,
 } from 'lucide-react';
 
 export const CourseDetails: React.FC = () => {
@@ -121,18 +122,17 @@ export const CourseDetails: React.FC = () => {
 
               {/* Course Meta Specs */}
               <div className="flex flex-wrap items-center gap-6 pt-2 text-xs text-slate-300">
-                <div className="flex items-center gap-1.5 text-amber-400 font-bold">
-                  <Star className="w-4 h-4 fill-current" />
-                  <span>{course.rating.toFixed(1)}</span>
-                  <span className="text-slate-400 font-normal">({course.reviews?.length || 150} reviews)</span>
-                </div>
                 <div className="flex items-center gap-1.5 text-slate-300">
-                  <Users className="w-4 h-4 text-indigo-400" />
-                  <span>{course.studentsCount.toLocaleString()} students enrolled</span>
+                  <BookOpen className="w-4 h-4 text-indigo-400" />
+                  <span>{course.modules.length} Modules • {totalLessons} Lessons</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-slate-300">
                   <Clock className="w-4 h-4 text-indigo-400" />
-                  <span>{course.duration} ({totalLessons} lessons)</span>
+                  <span>{course.duration}</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                  <Award className="w-4 h-4" />
+                  <span>Verified Digital Certificate</span>
                 </div>
               </div>
 
@@ -316,16 +316,17 @@ export const CourseDetails: React.FC = () => {
                       {isExpanded && (
                         <div className="divide-y divide-slate-100 dark:divide-slate-800/80">
                           {module.lessons.map((lesson, lIdx) => (
-                            <div
+                            <Link
                               key={lesson.id}
-                              className="p-4 sm:px-6 flex items-center justify-between gap-4 text-xs hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors"
+                              to={`/app/student/learn/${course.id}`}
+                              className="p-4 sm:px-6 flex items-center justify-between gap-4 text-xs hover:bg-slate-50/80 dark:hover:bg-slate-800/50 transition-colors group"
                             >
                               <div className="flex items-center gap-3">
-                                <div className="p-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400">
+                                <div className="p-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                                   <Play className="w-3.5 h-3.5" />
                                 </div>
                                 <div>
-                                  <span className="font-semibold text-slate-800 dark:text-slate-200">
+                                  <span className="font-semibold text-slate-800 dark:text-slate-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                     {lIdx + 1}. {lesson.title}
                                   </span>
                                   {lesson.freePreview && (
@@ -333,12 +334,22 @@ export const CourseDetails: React.FC = () => {
                                       Free Preview
                                     </span>
                                   )}
+                                  {lesson.isVerifiedVideo && (
+                                    <span className="ml-2 px-1.5 py-0.5 text-[9px] font-bold rounded bg-red-50 dark:bg-red-950/70 border border-red-200 dark:border-red-900 text-red-700 dark:text-red-300">
+                                      YouTube
+                                    </span>
+                                  )}
                                 </div>
                               </div>
-                              <span className="text-slate-400 font-mono text-[11px]">
-                                {lesson.duration}
-                              </span>
-                            </div>
+                              <div className="flex items-center gap-2">
+                                <span className="text-slate-400 font-mono text-[11px]">
+                                  {lesson.duration}
+                                </span>
+                                <span className="text-[10px] font-bold text-indigo-600 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                                  Watch →
+                                </span>
+                              </div>
+                            </Link>
                           ))}
                         </div>
                       )}
@@ -363,45 +374,20 @@ export const CourseDetails: React.FC = () => {
               </ul>
             </div>
 
-            {/* Student Reviews */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xs">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                  Student Feedback & Reviews
-                </h3>
-                <div className="flex items-center gap-1.5 text-amber-500 font-bold text-sm">
-                  <Star className="w-4 h-4 fill-current" />
-                  <span>{course.rating.toFixed(1)} / 5.0</span>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                {course.reviews?.map((rev) => (
-                  <div
-                    key={rev.id}
-                    className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 space-y-2"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <img
-                          src={rev.avatar}
-                          alt={rev.userName}
-                          className="w-7 h-7 rounded-full object-cover"
-                        />
-                        <span className="text-xs font-bold text-slate-900 dark:text-white">
-                          {rev.userName}
-                        </span>
-                      </div>
-                      <span className="text-[10px] text-slate-400">{rev.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-amber-400">
-                      {[...Array(rev.rating)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                      "{rev.comment}"
-                    </p>
+            {/* Course Learning Outcomes */}
+            <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 sm:p-8 space-y-5 shadow-xs">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-indigo-500" />
+                Verified Course Curriculum Outcomes
+              </h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Structured to build verified engineering competencies through guided instructional videos, code demonstrations, and progressive lab milestones.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {course.learningObjectives?.map((obj, i) => (
+                  <div key={i} className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-xs text-slate-700 dark:text-slate-300">{obj}</span>
                   </div>
                 ))}
               </div>
@@ -438,10 +424,10 @@ export const CourseDetails: React.FC = () => {
                 <span>Placement Alignment</span>
               </div>
               <h4 className="text-base font-bold text-slate-900 dark:text-white">
-                Prepares you for roles at:
+                Prepares you for roles in:
               </h4>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                Completing this course fulfills the technical round requirements for TCS Digital, Infosys SP, Wipro Turbo, and Amazon SDE Intern drives.
+                Completing this course develops competencies required for Software Engineering, Full Stack, and Systems development roles.
               </p>
               <Link to="/careers">
                 <Button size="small" variant="primary" fullWidth>

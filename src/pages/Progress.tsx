@@ -28,12 +28,20 @@ export const Progress: React.FC = () => {
     (id) => enrolledCourses[id].progress >= 100
   ).length;
 
+  const avgCourseProgress =
+    totalEnrolled > 0
+      ? Math.round(
+          enrolledCourseIds.reduce((acc, id) => acc + (enrolledCourses[id].progress || 0), 0) /
+            totalEnrolled
+        )
+      : 0;
+
   const avgQuizScore =
     quizResults.length > 0
       ? Math.round(
           quizResults.reduce((acc, q) => acc + q.percentage, 0) / quizResults.length
         )
-      : 88;
+      : null;
 
   const gradedAssignments = assignments.filter((a) => String(a.status).toLowerCase() === 'graded');
   const avgAssignmentGrade =
@@ -42,15 +50,17 @@ export const Progress: React.FC = () => {
           gradedAssignments.reduce((acc, a) => acc + (Number(a.grade) || 0), 0) /
             gradedAssignments.length
         )
-      : 92;
+      : null;
 
-  // Placement readiness calculation
+  // Placement readiness calculation from verified database state
+  const quizFactor = avgQuizScore !== null ? avgQuizScore * 0.3 : 0;
+  const assignmentFactor = avgAssignmentGrade !== null ? avgAssignmentGrade * 0.3 : 0;
   const placementReadiness = Math.min(
     100,
     Math.round(
-      (completedCoursesCount >= 1 ? 40 : 20) +
-        (avgQuizScore * 0.3) +
-        (avgAssignmentGrade * 0.3)
+      (completedCoursesCount >= 1 ? 40 : totalEnrolled > 0 ? 20 : 0) +
+        quizFactor +
+        assignmentFactor
     )
   );
 
@@ -133,28 +143,28 @@ export const Progress: React.FC = () => {
           <div className="space-y-1 text-xs">
             <div className="flex justify-between text-indigo-200">
               <span>Technical Coursework</span>
-              <span className="font-bold text-white">95%</span>
+              <span className="font-bold text-white">{avgCourseProgress}%</span>
             </div>
             <div className="w-full bg-indigo-950/60 h-2 rounded-full overflow-hidden">
-              <div className="bg-emerald-400 h-full rounded-full w-[95%]" />
+              <div className="bg-emerald-400 h-full rounded-full" style={{ width: `${avgCourseProgress}%` }} />
             </div>
           </div>
           <div className="space-y-1 text-xs">
             <div className="flex justify-between text-indigo-200">
               <span>Aptitude & Coding Tests</span>
-              <span className="font-bold text-white">{avgQuizScore}%</span>
+              <span className="font-bold text-white">{avgQuizScore !== null ? `${avgQuizScore}%` : 'N/A'}</span>
             </div>
             <div className="w-full bg-indigo-950/60 h-2 rounded-full overflow-hidden">
-              <div className="bg-blue-400 h-full rounded-full" style={{ width: `${avgQuizScore}%` }} />
+              <div className="bg-blue-400 h-full rounded-full" style={{ width: `${avgQuizScore || 0}%` }} />
             </div>
           </div>
           <div className="space-y-1 text-xs">
             <div className="flex justify-between text-indigo-200">
               <span>Lab Assignments</span>
-              <span className="font-bold text-white">{avgAssignmentGrade}%</span>
+              <span className="font-bold text-white">{avgAssignmentGrade !== null ? `${avgAssignmentGrade}%` : 'N/A'}</span>
             </div>
             <div className="w-full bg-indigo-950/60 h-2 rounded-full overflow-hidden">
-              <div className="bg-amber-400 h-full rounded-full" style={{ width: `${avgAssignmentGrade}%` }} />
+              <div className="bg-amber-400 h-full rounded-full" style={{ width: `${avgAssignmentGrade || 0}%` }} />
             </div>
           </div>
         </div>

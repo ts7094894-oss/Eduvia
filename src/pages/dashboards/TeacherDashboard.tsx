@@ -5,6 +5,7 @@ import { useToast } from '../../context/ToastContext';
 import { DashboardCard } from '../../components/DashboardCard';
 import { Button } from '../../components/Button';
 import { Modal } from '../../components/Modal';
+import { AIVideoGeneratorModal } from '../../components/video/AIVideoGeneratorModal';
 import {
   BookOpen,
   Users,
@@ -25,6 +26,7 @@ export const TeacherDashboard: React.FC = () => {
   const toast = useToast();
 
   const [createModalOpen, setCreateModalOpen] = useState(false);
+  const [aiVideoModalOpen, setAiVideoModalOpen] = useState(false);
   const [newCourse, setNewCourse] = useState({
     title: '',
     category: 'Computer Science',
@@ -57,8 +59,12 @@ export const TeacherDashboard: React.FC = () => {
             {
               id: `l-${Date.now()}-1`,
               title: 'Introduction and Environment Setup',
-              duration: '14 mins',
-              videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+              duration: '18:45',
+              videoUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+              youtubeVideoId: 'rfscVS0vtbw',
+              youtubeUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+              isVerifiedVideo: true,
+              channelTitle: 'freeCodeCamp.org',
             },
           ],
         },
@@ -83,18 +89,28 @@ export const TeacherDashboard: React.FC = () => {
             Academic Management & Grading
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-            Create courses, upload recorded lectures, review submitted assignments, and monitor student completion analytics.
+            Create courses, generate AI-powered video lessons, review assignments, and monitor student completion analytics.
           </p>
         </div>
 
-        <Button
-          variant="primary"
-          size="medium"
-          onClick={() => setCreateModalOpen(true)}
-          leftIcon={<Plus className="w-4 h-4" />}
-        >
-          Create New Course
-        </Button>
+        <div className="flex items-center gap-3">
+          <Button
+            variant="outline"
+            size="medium"
+            onClick={() => setAiVideoModalOpen(true)}
+            leftIcon={<Sparkles className="w-4 h-4 text-indigo-600" />}
+          >
+            AI Video Studio
+          </Button>
+          <Button
+            variant="primary"
+            size="medium"
+            onClick={() => setCreateModalOpen(true)}
+            leftIcon={<Plus className="w-4 h-4" />}
+          >
+            Create New Course
+          </Button>
+        </div>
       </div>
 
       {/* KPI Stats */}
@@ -157,8 +173,8 @@ export const TeacherDashboard: React.FC = () => {
 
               <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 text-xs flex justify-between text-slate-500">
                 <span>{course.modules.length} Modules</span>
-                <span>{course.studentsCount} Students Enrolled</span>
-                <span className="text-amber-500 font-bold">★ {course.rating}</span>
+                <span>{course.totalLessons || course.modules.reduce((acc, m) => acc + m.lessons.length, 0)} Lessons</span>
+                <span>{course.duration}</span>
               </div>
 
               <div className="flex gap-2">
@@ -234,6 +250,20 @@ export const TeacherDashboard: React.FC = () => {
           </div>
         </form>
       </Modal>
+
+      {/* AI Video Generator Studio Modal */}
+      <AIVideoGeneratorModal
+        isOpen={aiVideoModalOpen}
+        onClose={() => setAiVideoModalOpen(false)}
+        defaultTopic="Database Indexing, B-Trees & Query Optimization"
+        defaultCourseTitle="Database Management Systems & SQL"
+        onLessonCreated={(newLesson) => {
+          toast.success(
+            'New AI Video Lesson Created!',
+            `"${newLesson.title}" has been added to your academic course offerings.`
+          );
+        }}
+      />
     </div>
   );
 };

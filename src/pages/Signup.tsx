@@ -52,7 +52,7 @@ export const Signup: React.FC = () => {
     setTimeout(() => {
       signup({ name, email, role });
       setIsLoading(false);
-      toast.success('Account Created!', `Welcome to EduPath as a ${role}.`);
+      toast.success('Account Created!', `Welcome to EDUVIA as a ${role}.`);
       navigate(`/app/${role}`);
     }, 600);
   };
@@ -64,7 +64,7 @@ export const Signup: React.FC = () => {
         <div className="text-center space-y-2">
           <Logo size="large" />
           <h2 className="text-2xl font-black text-slate-900 dark:text-white pt-2">
-            Create your EduPath Account
+            Create your EDUVIA Account
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             Start learning CSE subjects and accessing direct campus placements.
@@ -184,7 +184,7 @@ export const Signup: React.FC = () => {
               className="mt-0.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
             />
             <label htmlFor="terms" className="text-slate-600 dark:text-slate-400">
-              I agree to EduPath's Academic Honor Code, Placement Integrity Guidelines, and Privacy Terms.
+              I agree to EDUVIA's Academic Honor Code, Placement Integrity Guidelines, and Privacy Terms.
             </label>
           </div>
 

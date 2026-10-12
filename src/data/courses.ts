@@ -1,6 +1,7 @@
 import { Course } from '../types';
 
 export const INITIAL_COURSES: Course[] = [
+  // 1. Python Programming
   {
     id: 'course-1',
     title: 'Python Programming Masterclass',
@@ -28,105 +29,226 @@ export const INITIAL_COURSES: Course[] = [
       'Prepare for placement technical rounds and coding tests'
     ],
     prerequisites: ['No prior programming experience required', 'A computer with internet access'],
-    totalLessons: 24,
+    totalLessons: 12,
     modules: [
       {
         id: 'mod-1',
-        title: 'Module 1: Python Fundamentals & Environment Setup',
+        title: 'Module 1: Python Basics',
         duration: '4h 30m',
         lessons: [
           {
             id: 'les-101',
-            title: '1.1 Introduction to Python & Setting up VS Code',
+            title: 'Introduction to Python',
+            videoTitle: 'Python for Beginners - Full Course [Programming Tutorial]',
             duration: '18:45',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-            description: 'Learn why Python is the #1 language for modern software engineering, install Python 3.12, and configure VS Code with essential extensions.',
-            notes: 'Python was created by Guido van Rossum and released in 1991. It emphasizes code readability with its notable use of significant whitespace.',
+            durationSeconds: 1125,
+            videoUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+            youtubeVideoId: 'rfscVS0vtbw',
+            youtubeUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Introduction to Python & Setup',
+            videoThumbnail: 'https://img.youtube.com/vi/rfscVS0vtbw/hqdefault.jpg',
+            description: 'Learn why Python is the leading language for modern engineering, install Python 3.12, and configure VS Code with essential extensions.',
+            notes: 'Python was created by Guido van Rossum and released in 1991. It emphasizes readability with significant whitespace.',
           },
           {
             id: 'les-102',
-            title: '1.2 Variables, Dynamic Typing & Standard I/O',
+            title: 'Variables and Data Types',
+            videoTitle: 'CS50P - Lecture 0 - Functions, Variables',
             duration: '22:10',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+            durationSeconds: 1330,
+            videoUrl: 'https://www.youtube.com/watch?v=nLRL_NcnK-4',
+            youtubeVideoId: 'nLRL_NcnK-4',
+            youtubeUrl: 'https://www.youtube.com/watch?v=nLRL_NcnK-4',
+            isVerifiedVideo: true,
+            channelTitle: 'CS50',
+            videoTopic: 'Variables, Types, and Expressions',
+            videoThumbnail: 'https://img.youtube.com/vi/nLRL_NcnK-4/hqdefault.jpg',
             description: 'Deep dive into Python variable assignment, type inference, formatting strings with f-strings, and receiving user input.',
             notes: 'Use type() to inspect object data types. Python supports arbitrary-precision integers out of the box.',
           },
           {
             id: 'les-103',
-            title: '1.3 Control Flow: If-Else, Match-Case & Logical Operators',
-            duration: '28:30',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-            description: 'Build conditional decision trees and use structural pattern matching introduced in modern Python versions.',
-            notes: 'Remember indentation rules: 4 spaces per indent level is standard PEP 8 practice.',
+            title: 'Operators',
+            videoTitle: 'Python Tutorial for Beginners [Full Course]',
+            duration: '20:40',
+            durationSeconds: 1240,
+            videoUrl: 'https://www.youtube.com/watch?v=_uQrJ0TkZlc',
+            youtubeVideoId: '_uQrJ0TkZlc',
+            youtubeUrl: 'https://www.youtube.com/watch?v=_uQrJ0TkZlc',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'Operators & Logical Expressions',
+            videoThumbnail: 'https://img.youtube.com/vi/_uQrJ0TkZlc/hqdefault.jpg',
+            description: 'Master arithmetic operators, floor division, modulo, chained comparisons, and logical short-circuiting.',
+            notes: 'Remember: / always returns a float, while // performs floor division.',
+          },
+          {
+            id: 'les-104',
+            title: 'Input and Output',
+            videoTitle: 'Python Input and Output Operations Tutorial',
+            duration: '18:00',
+            durationSeconds: 1080,
+            videoUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+            youtubeVideoId: 'rfscVS0vtbw',
+            youtubeUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'User Input, Parsing & Formatting',
+            videoThumbnail: 'https://img.youtube.com/vi/rfscVS0vtbw/hqdefault.jpg',
+            description: 'Capture user interaction using input(), parse space-separated tokens, and format output using modern f-strings.',
+            notes: 'input() always returns a string; use explicit typecasting with int() or float() for numerical operations.',
           }
         ]
       },
       {
         id: 'mod-2',
-        title: 'Module 2: Data Structures & Built-in Collections',
-        duration: '6h 15m',
+        title: 'Module 2: Control Flow',
+        duration: '5h 45m',
         lessons: [
           {
             id: 'les-201',
-            title: '2.1 Working with Lists & List Comprehensions',
-            duration: '25:00',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-            description: 'Learn list slicing, indexing, sorting, appending, and high-performance Python list comprehensions.',
-            notes: 'List comprehensions provide a concise way to create lists: [x**2 for x in range(10) if x % 2 == 0].',
+            title: 'If-Else',
+            videoTitle: 'Python If Else Statements & Conditions Tutorial',
+            duration: '28:30',
+            durationSeconds: 1710,
+            videoUrl: 'https://www.youtube.com/watch?v=_uQrJ0TkZlc',
+            youtubeVideoId: '_uQrJ0TkZlc',
+            youtubeUrl: 'https://www.youtube.com/watch?v=_uQrJ0TkZlc',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'Conditional Logic & Decision Making',
+            videoThumbnail: 'https://img.youtube.com/vi/_uQrJ0TkZlc/hqdefault.jpg',
+            description: 'Build conditional decision trees and use structural pattern matching introduced in modern Python versions.',
+            notes: 'Indentation: exactly 4 spaces per indent level is standard PEP 8 practice.',
           },
           {
             id: 'les-202',
-            title: '2.2 Dictionaries, Sets & Hashing Mechanics',
-            duration: '31:40',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
-            description: 'Understand key-value lookups, hash collisions, set operations (union, intersection), and time complexity O(1).',
-            notes: 'Dictionary keys must be hashable immutable types (strings, numbers, tuples).',
+            title: 'Loops',
+            videoTitle: 'Python Loops Tutorial - While Loops and For Loops',
+            duration: '25:00',
+            durationSeconds: 1500,
+            videoUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+            youtubeVideoId: 'rfscVS0vtbw',
+            youtubeUrl: 'https://www.youtube.com/watch?v=rfscVS0vtbw',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'While Loops, For Loops, range() & break/continue',
+            videoThumbnail: 'https://img.youtube.com/vi/rfscVS0vtbw/hqdefault.jpg',
+            description: 'Iterate over ranges, collections, and generators using while loops, for loops, break, continue, and else clauses.',
+            notes: 'The for...else construct in Python executes the else block only when the loop terminates without encountering a break statement.',
+          },
+          {
+            id: 'les-203',
+            title: 'Practice Problems',
+            videoTitle: 'YouTube Search: Python Control Flow Practice Problems',
+            duration: '32:15',
+            durationSeconds: 1935,
+            videoUrl: 'https://www.youtube.com/results?search_query=Python+Control+Flow+Loops+Practice+Problems+Tutorial',
+            youtubeSearchQuery: 'Python Control Flow Loops Practice Problems Tutorial',
+            isVerifiedVideo: false,
+            videoTopic: 'Control Flow Placement Coding Practice',
+            videoThumbnail: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80',
+            description: 'Solve campus interview problems: Fibonacci sequence, prime number checker, pattern printing, and fizz-buzz implementations.',
+            notes: 'Always calculate time complexity before choosing nested loops in interview coding rounds.',
           }
         ]
       },
       {
         id: 'mod-3',
-        title: 'Module 3: Functions, Modules & Object-Oriented Programming',
-        duration: '8h 45m',
+        title: 'Module 3: Functions',
+        duration: '6h 15m',
         lessons: [
           {
             id: 'les-301',
-            title: '3.1 Defining Functions, *args, **kwargs & Lambda',
+            title: 'Functions',
+            videoTitle: 'CS50P - Functions, Parameters and Return Values',
             duration: '29:15',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4',
-            description: 'Write reusable, modular functions with default arguments, variable positional/keyword args, and lambda expressions.',
-            notes: 'Functions are first-class citizens in Python and can be passed as arguments or returned from other functions.',
+            durationSeconds: 1755,
+            videoUrl: 'https://www.youtube.com/watch?v=nLRL_NcnK-4',
+            youtubeVideoId: 'nLRL_NcnK-4',
+            youtubeUrl: 'https://www.youtube.com/watch?v=nLRL_NcnK-4',
+            isVerifiedVideo: true,
+            channelTitle: 'CS50',
+            videoTopic: 'Function Definitions, Scope & Pure Functions',
+            videoThumbnail: 'https://img.youtube.com/vi/nLRL_NcnK-4/hqdefault.jpg',
+            description: 'Understand functions, local and global scope (LEGB rule), pure functions, and docstrings.',
+            notes: 'Python follows LEGB variable scoping: Local, Enclosing, Global, Built-in.',
           },
           {
             id: 'les-302',
-            title: '3.2 Classes, Constructors (__init__), and Inheritance',
-            duration: '36:20',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
-            description: 'Create real-world class architectures, encapsulation principles, super() initialization, and method overriding.',
-            notes: 'Encapsulation in Python is conventionally indicated by leading underscores (_protected, __private).',
+            title: 'Parameters',
+            videoTitle: 'YouTube Search: Python Function Parameters Default Args Kwargs',
+            duration: '24:40',
+            durationSeconds: 1480,
+            videoUrl: 'https://www.youtube.com/results?search_query=Python+Function+Parameters+Default+Args+Kwargs+Tutorial',
+            youtubeSearchQuery: 'Python Function Parameters Default Args Kwargs Tutorial',
+            isVerifiedVideo: false,
+            videoTopic: 'Positional, Keyword, *args and **kwargs',
+            videoThumbnail: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80',
+            description: 'Master positional-only, keyword-only parameters, default mutable trap prevention, and dynamic unpacking.',
+            notes: 'Never use mutable defaults like [] or {} in Python function definitions.',
+          },
+          {
+            id: 'les-303',
+            title: 'Lambda Functions',
+            videoTitle: 'Python Lambda Functions and Higher Order Functions',
+            duration: '21:30',
+            durationSeconds: 1290,
+            videoUrl: 'https://www.youtube.com/watch?v=YYXdXT2l-Gg',
+            youtubeVideoId: 'YYXdXT2l-Gg',
+            youtubeUrl: 'https://www.youtube.com/watch?v=YYXdXT2l-Gg',
+            isVerifiedVideo: true,
+            channelTitle: 'Corey Schafer',
+            videoTopic: 'Anonymous Functions, map, filter, and sorted keys',
+            videoThumbnail: 'https://img.youtube.com/vi/YYXdXT2l-Gg/hqdefault.jpg',
+            description: 'Write concise anonymous functions, pass custom sorting keys, and apply map(), filter(), and reduce().',
+            notes: 'While lambda functions are elegant for simple transformations, prefer named def functions when logic exceeds a single expression.',
+          }
+        ]
+      },
+      {
+        id: 'mod-4',
+        title: 'Module 4: Projects',
+        duration: '8h 00m',
+        lessons: [
+          {
+            id: 'les-401',
+            title: 'Mini Project: Student Management CLI',
+            videoTitle: '12 Beginner Python Projects - Coding Course',
+            duration: '45:00',
+            durationSeconds: 2700,
+            videoUrl: 'https://www.youtube.com/watch?v=8ext9G7xspg',
+            youtubeVideoId: '8ext9G7xspg',
+            youtubeUrl: 'https://www.youtube.com/watch?v=8ext9G7xspg',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Hands-on Student Management Project',
+            videoThumbnail: 'https://img.youtube.com/vi/8ext9G7xspg/hqdefault.jpg',
+            description: 'Build an interactive CRUD application that tracks student enrollment, persists records to JSON files, and computes statistics.',
+            notes: 'Practice separating business logic from console I/O formatting.',
+          },
+          {
+            id: 'les-402',
+            title: 'Final Capstone: Automated Placement Resume Parser',
+            videoTitle: 'YouTube Search: Python Resume Parser Project NLP File Handling',
+            duration: '58:20',
+            durationSeconds: 3500,
+            videoUrl: 'https://www.youtube.com/results?search_query=Python+Resume+Parser+Project+PDF+Text+Extraction+Tutorial',
+            youtubeSearchQuery: 'Python Resume Parser Project PDF Text Extraction Tutorial',
+            isVerifiedVideo: false,
+            videoTopic: 'Full Capstone Python Portfolio Project',
+            videoThumbnail: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=80',
+            description: 'Construct a complete capstone project that extracts candidate skills from PDF resumes, calculates keyword match ratios, and generates reports.',
+            notes: 'Include this capstone project on your GitHub profile and link it in the EDUVIA Resume Builder.',
           }
         ]
       }
-    ],
-    reviews: [
-      {
-        id: 'rev-1',
-        userName: 'Aakash Verma',
-        userAvatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '2 weeks ago',
-        comment: 'Helped me clear my technical round at TCS! Dr. Rajesh explains OOP concepts with crystal clarity.',
-      },
-      {
-        id: 'rev-2',
-        userName: 'Sneha Patel',
-        userAvatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '1 month ago',
-        comment: 'The quizzes and assignments are top-notch for CSE college students.',
-      }
     ]
   },
+
+  // 2. Java Programming & Enterprise Backend
   {
     id: 'course-2',
     title: 'Java Programming & Enterprise Backend',
@@ -144,7 +266,7 @@ export const INITIAL_COURSES: Course[] = [
     category: 'Programming',
     thumbnail: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=80',
     description: 'Complete Java mastery covering Java 21, JVM internals, Collections Framework, Multithreading, Concurrency, and Spring Boot fundamentals.',
-    overview: 'Java is the backbone of Fortune 500 enterprise architectures and campus recruitment drives. This course takes you from Core Java OOP principles to writing high-throughput concurrent systems and Spring Boot REST APIs.',
+    overview: 'Java is the backbone of enterprise architectures and campus recruitment drives. This course takes you from Core Java OOP principles to writing high-throughput concurrent systems and Spring Boot REST APIs.',
     learningObjectives: [
       'Understand JVM memory architecture (Stack vs Heap, Garbage Collection)',
       'Master Object-Oriented Principles: Abstraction, Polymorphism, Encapsulation, Inheritance',
@@ -154,7 +276,7 @@ export const INITIAL_COURSES: Course[] = [
       'Crack campus interviews at Infosys, Wipro, TCS, and Capgemini'
     ],
     prerequisites: ['Basic logical thinking and programming familiarity'],
-    totalLessons: 28,
+    totalLessons: 4,
     modules: [
       {
         id: 'mod-j1',
@@ -164,16 +286,32 @@ export const INITIAL_COURSES: Course[] = [
           {
             id: 'les-j101',
             title: '1.1 JDK, JRE, JVM Architecture & First Bytecode Program',
+            videoTitle: 'Java Tutorial for Beginners [2020]',
             duration: '21:15',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+            durationSeconds: 1275,
+            videoUrl: 'https://www.youtube.com/watch?v=eIrMbAQSU34',
+            youtubeVideoId: 'eIrMbAQSU34',
+            youtubeUrl: 'https://www.youtube.com/watch?v=eIrMbAQSU34',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'JDK, JRE, JVM & Platform Independence',
+            videoThumbnail: 'https://img.youtube.com/vi/eIrMbAQSU34/hqdefault.jpg',
             description: 'Understand how Java compiles source code to Bytecode (.class) executed by the Java Virtual Machine across all platforms.',
             notes: 'Write Once, Run Anywhere (WORA) is Java’s cornerstone principle.',
           },
           {
             id: 'les-j102',
             title: '1.2 Polymorphism, Method Overloading & Overriding',
+            videoTitle: 'Java Object Oriented Programming (OOP) - Overloading & Overriding',
             duration: '27:40',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+            durationSeconds: 1660,
+            videoUrl: 'https://www.youtube.com/watch?v=xk4_1vDrzzo',
+            youtubeVideoId: 'xk4_1vDrzzo',
+            youtubeUrl: 'https://www.youtube.com/watch?v=xk4_1vDrzzo',
+            isVerifiedVideo: true,
+            channelTitle: 'Bro Code',
+            videoTopic: 'Polymorphism & Dynamic Method Dispatch',
+            videoThumbnail: 'https://img.youtube.com/vi/xk4_1vDrzzo/hqdefault.jpg',
             description: 'Runtime vs Compile-time polymorphism with dynamic method dispatch.',
             notes: 'Static methods cannot be overridden in Java; they are shadowed.',
           }
@@ -187,193 +325,41 @@ export const INITIAL_COURSES: Course[] = [
           {
             id: 'les-j201',
             title: '2.1 List, Set, Map Interfaces & Internal Working of HashMap',
+            videoTitle: 'Java Collections Framework Tutorial - List, Set, Map & HashMap',
             duration: '34:20',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+            durationSeconds: 2060,
+            videoUrl: 'https://www.youtube.com/watch?v=9om_wN3p3c8',
+            youtubeVideoId: '9om_wN3p3c8',
+            youtubeUrl: 'https://www.youtube.com/watch?v=9om_wN3p3c8',
+            isVerifiedVideo: true,
+            channelTitle: 'Telusko',
+            videoTopic: 'Collections Framework & HashMap Internals',
+            videoThumbnail: 'https://img.youtube.com/vi/9om_wN3p3c8/hqdefault.jpg',
             description: 'Understand buckets, hashCode(), equals() contracts, and Treeify threshold in modern Java HashMap.',
             notes: 'In Java 8+, HashMap bins convert from linked nodes to red-black trees when threshold > 8.',
-          }
-        ]
-      }
-    ],
-    reviews: [
-      {
-        id: 'rev-j1',
-        userName: 'Rohan Sharma',
-        userAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '3 weeks ago',
-        comment: 'Got placed at Infosys as Java Specialist Programmer! Best course for placement preparation.',
-      }
-    ]
-  },
-  {
-    id: 'course-3',
-    title: 'Full Stack Web Development with React & Node',
-    slug: 'web-development',
-    instructor: {
-      name: 'Vikramaditya Singhania',
-      title: 'Full Stack Tech Lead & Open Source Contributor',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
-      rating: 4.95,
-    },
-    rating: 4.9,
-    studentsCount: 5200,
-    duration: '54 Hours',
-    difficulty: 'Intermediate',
-    category: 'Web Development',
-    thumbnail: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop&q=80',
-    description: 'Build modern responsive full-stack web applications using HTML5, CSS3, Tailwind CSS, TypeScript, React 19, Express.js, and MongoDB.',
-    overview: 'Transform into a job-ready full stack web developer. Learn modern UI design, state management, REST API architecture, authentication, and deployment on modern cloud platforms.',
-    learningObjectives: [
-      'Master semantic HTML5, modern CSS3 layout (Flexbox & CSS Grid), and Tailwind CSS',
-      'Modern JavaScript ES6+ (Async/Await, Promises, Destructuring, Closures)',
-      'React architecture: Components, Hooks, Context, State Management',
-      'Backend REST API development with Express.js and Node',
-      'Database integration with MongoDB and PostgreSQL',
-      'Deploy production apps on Cloud Run and Vercel'
-    ],
-    prerequisites: ['Basic computer proficiency'],
-    totalLessons: 32,
-    modules: [
-      {
-        id: 'mod-w1',
-        title: 'Module 1: Modern Frontend & Tailwind CSS',
-        duration: '7h 10m',
-        lessons: [
+          },
           {
-            id: 'les-w101',
-            title: '1.1 Modern Responsive Design with Flexbox, Grid & Tailwind CSS',
-            duration: '28:10',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-            description: 'Create pixel-perfect, mobile-first responsive layouts with utility-first Tailwind classes.',
-            notes: 'Always design mobile-first using min-width breakpoints in Tailwind.',
+            id: 'les-j202',
+            title: '2.2 Java Generics, Custom Collections & Multithreading',
+            videoTitle: 'Java Full Course for Beginners - OOP and Collections',
+            duration: '38:10',
+            durationSeconds: 2290,
+            videoUrl: 'https://www.youtube.com/watch?v=A74TOX803D0',
+            youtubeVideoId: 'A74TOX803D0',
+            youtubeUrl: 'https://www.youtube.com/watch?v=A74TOX803D0',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Generics, Bounded Types & Thread Safety',
+            videoThumbnail: 'https://img.youtube.com/vi/A74TOX803D0/hqdefault.jpg',
+            description: 'Type erasure, wildcard generics <? extends T>, thread synchronization, and modern concurrency.',
+            notes: 'Generics provide compile-time safety and eliminate explicit casting.',
           }
         ]
       }
-    ],
-    reviews: [
-      {
-        id: 'rev-w1',
-        userName: 'Pooja Hegde',
-        userAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '1 week ago',
-        comment: 'The portfolio project got me 3 internship interview calls directly through the EduPath portal!',
-      }
     ]
   },
-  {
-    id: 'course-4',
-    title: 'Data Structures & Algorithms in Depth',
-    slug: 'data-structures-algorithms',
-    instructor: {
-      name: 'Dr. Siddharth Sen',
-      title: 'ACM ICPC Finalist & Ex-FAANG Software Engineer',
-      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
-      rating: 5.0,
-    },
-    rating: 4.95,
-    studentsCount: 6100,
-    duration: '60 Hours',
-    difficulty: 'Advanced',
-    category: 'Programming',
-    thumbnail: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80',
-    description: 'Crush technical coding interviews. Master Big-O notation, Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, and Backtracking.',
-    overview: 'The definitive DSA preparation course for college placement drives. Covers 250+ standard interview problems asked in FAANG, TCS Digital, Infosys Power Programmer, and top product companies.',
-    learningObjectives: [
-      'Calculate time and space complexity with asymptotic analysis',
-      'Linear data structures: Arrays, Two-Pointer, Sliding Window, Linked Lists, Stacks, Queues',
-      'Non-linear data structures: Binary Trees, BSTs, Heaps, and Graphs',
-      'Advanced algorithm paradigms: Greedy, Divide and Conquer, Dynamic Programming',
-      'Graph algorithms: BFS, DFS, Dijkstra, Bellman-Ford, Kruskal, Prim',
-      'Systematic problem-solving framework for timed coding assessments'
-    ],
-    prerequisites: ['Proficiency in at least one language (C++, Java, or Python)'],
-    totalLessons: 36,
-    modules: [
-      {
-        id: 'mod-d1',
-        title: 'Module 1: Algorithmic Complexity & Arrays Patterns',
-        duration: '8h 00m',
-        lessons: [
-          {
-            id: 'les-d101',
-            title: '1.1 Time & Space Complexity (Big-O, Omega, Theta)',
-            duration: '31:20',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-            description: 'Learn how to analyze nested loops, recursion trees, and amortized complexity.',
-            notes: 'Binary search runs in O(log N) time because it halves the search space each iteration.',
-          }
-        ]
-      }
-    ],
-    reviews: [
-      {
-        id: 'rev-d1',
-        userName: 'Naveen Reddy',
-        userAvatar: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '5 days ago',
-        comment: 'Cracked the 12 LPA package coding assessment thanks to Dr. Siddharth’s DP breakdowns!',
-      }
-    ]
-  },
-  {
-    id: 'course-5',
-    title: 'Machine Learning & Predictive Modeling',
-    slug: 'machine-learning',
-    instructor: {
-      name: 'Dr. Meera Nambiar',
-      title: 'Principal Data Scientist & IEEE Fellow',
-      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
-      rating: 4.85,
-    },
-    rating: 4.8,
-    studentsCount: 2900,
-    duration: '45 Hours',
-    difficulty: 'Intermediate',
-    category: 'Data Science',
-    thumbnail: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&auto=format&fit=crop&q=80',
-    description: 'Hands-on Machine Learning: Supervised learning, Unsupervised clustering, Feature engineering, Scikit-Learn, and model deployment pipelines.',
-    overview: 'Learn the mathematics and practical application of Machine Learning algorithms. Train models to predict trends, classify text, detect fraud, and build end-to-end data products.',
-    learningObjectives: [
-      'Data preprocessing, feature scaling, one-hot encoding, and imputation',
-      'Linear Regression, Logistic Regression, Decision Trees, and Random Forests',
-      'Support Vector Machines (SVM) and Gradient Boosting (XGBoost, LightGBM)',
-      'Unsupervised Learning: K-Means, Hierarchical Clustering, and PCA',
-      'Model evaluation metrics: Precision, Recall, F1-Score, ROC-AUC curve',
-      'Deploying ML models as REST API endpoints'
-    ],
-    prerequisites: ['Python basics and fundamental linear algebra / calculus concepts'],
-    totalLessons: 25,
-    modules: [
-      {
-        id: 'mod-m1',
-        title: 'Module 1: Data Exploration & Supervised Algorithms',
-        duration: '7h 30m',
-        lessons: [
-          {
-            id: 'les-m101',
-            title: '1.1 Feature Engineering & Exploratory Data Analysis with Pandas & Seaborn',
-            duration: '26:40',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-            description: 'Master data cleaning, outlier detection, distribution plotting, and correlation matrices.',
-            notes: 'Never fit data scalers on test data to avoid data leakage.',
-          }
-        ]
-      }
-    ],
-    reviews: [
-      {
-        id: 'rev-m1',
-        userName: 'Kavita Joshi',
-        userAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '2 weeks ago',
-        comment: 'Secured an ML Intern role at Deloitte after completing the predictive churn project.',
-      }
-    ]
-  },
+
+  // 3. Database Management Systems & SQL / MySQL
   {
     id: 'course-6',
     title: 'Database Management Systems & SQL',
@@ -401,7 +387,7 @@ export const INITIAL_COURSES: Course[] = [
       'NoSQL introduction: Document stores vs Key-Value vs Relational'
     ],
     prerequisites: ['No prior database experience required'],
-    totalLessons: 22,
+    totalLessons: 3,
     modules: [
       {
         id: 'mod-db1',
@@ -411,25 +397,825 @@ export const INITIAL_COURSES: Course[] = [
           {
             id: 'les-db101',
             title: '1.1 Relational Algebra & SQL DDL/DML Fundamentals',
+            videoTitle: 'SQL Tutorial - Full Database Course for Beginners',
             duration: '24:50',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+            durationSeconds: 1490,
+            videoUrl: 'https://www.youtube.com/watch?v=HXV3zeRR3h4',
+            youtubeVideoId: 'HXV3zeRR3h4',
+            youtubeUrl: 'https://www.youtube.com/watch?v=HXV3zeRR3h4',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'SQL Schema Creation, Constraints & Basic Queries',
+            videoThumbnail: 'https://img.youtube.com/vi/HXV3zeRR3h4/hqdefault.jpg',
             description: 'Learn tables, primary keys, foreign keys, constraints, and relational algebra projections.',
             notes: 'Foreign key constraints guarantee referential integrity across relational schemas.',
+          },
+          {
+            id: 'les-db102',
+            title: '1.2 Advanced SQL Joins, Aggregations & Subqueries',
+            videoTitle: 'MySQL Tutorial for Beginners [Full Course]',
+            duration: '31:20',
+            durationSeconds: 1880,
+            videoUrl: 'https://www.youtube.com/watch?v=7S_tz1z_5bA',
+            youtubeVideoId: '7S_tz1z_5bA',
+            youtubeUrl: 'https://www.youtube.com/watch?v=7S_tz1z_5bA',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'INNER JOIN, LEFT JOIN, GROUP BY & HAVING',
+            videoThumbnail: 'https://img.youtube.com/vi/7S_tz1z_5bA/hqdefault.jpg',
+            description: 'Master multi-table relational joins, self joins, grouping logic, and correlated subqueries.',
+            notes: 'WHERE filters rows before aggregation; HAVING filters groups after aggregation.',
+          }
+        ]
+      },
+      {
+        id: 'mod-db2',
+        title: 'Module 2: Normalization & Indexing',
+        duration: '5h 30m',
+        lessons: [
+          {
+            id: 'les-db201',
+            title: '2.1 Normalization (1NF, 2NF, 3NF, BCNF) & B-Tree Indexes',
+            videoTitle: 'SQL Basics Tutorial For Beginners - Queries & Indexing',
+            duration: '28:15',
+            durationSeconds: 1695,
+            videoUrl: 'https://www.youtube.com/watch?v=rUG0b2mkmvQ',
+            youtubeVideoId: 'rUG0b2mkmvQ',
+            youtubeUrl: 'https://www.youtube.com/watch?v=rUG0b2mkmvQ',
+            isVerifiedVideo: true,
+            channelTitle: 'Alex The Analyst',
+            videoTopic: 'Database Normalization & Query Speed Optimization',
+            videoThumbnail: 'https://img.youtube.com/vi/rUG0b2mkmvQ/hqdefault.jpg',
+            description: 'Eliminate update/deletion anomalies with Boyce-Codd Normal Form and build composite indexes.',
+            notes: 'Clustered indexes define the physical ordering of records in a database table.',
           }
         ]
       }
+    ]
+  },
+
+  // 4. HTML5 & Web Fundamentals
+  {
+    id: 'course-html',
+    title: 'HTML5 & Modern Web Document Architecture',
+    slug: 'html-fundamentals',
+    instructor: {
+      name: 'Aditi Sharma',
+      title: 'UI Systems Architect & Web Accessibility Advocate',
+      avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80',
+      rating: 4.9,
+    },
+    rating: 4.88,
+    studentsCount: 2950,
+    duration: '18 Hours',
+    difficulty: 'Beginner',
+    category: 'Web Development',
+    thumbnail: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&auto=format&fit=crop&q=80',
+    description: 'Master semantic HTML5 markup, accessible forms, meta SEO configurations, document trees, and DOM foundation for modern web engineering.',
+    overview: 'Clean, semantic HTML is the foundation of every professional web application. Learn modern document structure, audio/video tags, forms, input validation, and web accessibility (WCAG).',
+    learningObjectives: [
+      'Semantic tags: main, section, article, nav, header, footer',
+      'HTML Forms, input types, client-side validation, and attributes',
+      'Meta tags, Open Graph cards, and search engine optimization',
+      'Document Object Model (DOM) tree representation',
+      'Web accessibility (ARIA labels, screen readers, semantic landmarks)'
     ],
-    reviews: [
+    prerequisites: ['No prior coding experience needed'],
+    totalLessons: 2,
+    modules: [
       {
-        id: 'rev-db1',
-        userName: 'Ritu Sen',
-        userAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '3 weeks ago',
-        comment: 'The normalization cheat sheets and SQL interview quiz helped me ace Wipro technical interview!',
+        id: 'mod-html1',
+        title: 'Module 1: Semantic Markup & Forms',
+        duration: '4h 00m',
+        lessons: [
+          {
+            id: 'les-html101',
+            title: '1.1 HTML5 Elements, Document Structure & Semantic Tags',
+            videoTitle: 'HTML Tutorial for Beginners: HTML Crash Course',
+            duration: '22:45',
+            durationSeconds: 1365,
+            videoUrl: 'https://www.youtube.com/watch?v=kUMe1FH4CHE',
+            youtubeVideoId: 'kUMe1FH4CHE',
+            youtubeUrl: 'https://www.youtube.com/watch?v=kUMe1FH4CHE',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'HTML Document Head, Body & Semantic Landmarks',
+            videoThumbnail: 'https://img.youtube.com/vi/kUMe1FH4CHE/hqdefault.jpg',
+            description: 'Learn doctype, head, body, headings, paragraphs, links, and semantic landmark elements.',
+            notes: 'Using semantic tags improves SEO rankings and screen-reader accessibility.',
+          },
+          {
+            id: 'les-html102',
+            title: '1.2 Modern HTML Forms, Inputs, Validation & Media',
+            videoTitle: 'HTML Full Course - Build a Website Tutorial',
+            duration: '31:10',
+            durationSeconds: 1870,
+            videoUrl: 'https://www.youtube.com/watch?v=pQN-pnXPaVg',
+            youtubeVideoId: 'pQN-pnXPaVg',
+            youtubeUrl: 'https://www.youtube.com/watch?v=pQN-pnXPaVg',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Forms, File Uploads, Validation & Canvas',
+            videoThumbnail: 'https://img.youtube.com/vi/pQN-pnXPaVg/hqdefault.jpg',
+            description: 'Construct accessible forms with labels, pattern validation, radio buttons, and select dropdowns.',
+            notes: 'Always associate input elements with their corresponding <label for="..."> tags.',
+          }
+        ]
       }
     ]
   },
+
+  // 5. CSS3, Flexbox & Responsive Layouts
+  {
+    id: 'course-css',
+    title: 'CSS3, Modern Flexbox & Responsive Design',
+    slug: 'css-mastery',
+    instructor: {
+      name: 'Rohan Mehra',
+      title: 'Senior Frontend Design Engineer',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+      rating: 4.92,
+    },
+    rating: 4.9,
+    studentsCount: 3200,
+    duration: '24 Hours',
+    difficulty: 'Beginner',
+    category: 'Web Development',
+    thumbnail: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80',
+    description: 'Learn modern CSS: Box Model, Flexbox, CSS Grid, media queries, CSS variables, transitions, and responsive mobile-first styling.',
+    overview: 'Elevate your UI craft. Master the CSS cascade, specificity calculations, responsive layout architectures with Flexbox and CSS Grid, and create fluid user interfaces.',
+    learningObjectives: [
+      'The CSS Box Model: Margin, Border, Padding, and Content',
+      'Flexbox axes, alignment, justification, and dynamic wrapping',
+      'CSS Grid areas, fractions (fr), and auto-fit / auto-fill repeaters',
+      'Mobile-first media queries and responsive typography (clamp)',
+      'Modern CSS Custom Properties (Variables) and themes'
+    ],
+    prerequisites: ['HTML fundamentals'],
+    totalLessons: 3,
+    modules: [
+      {
+        id: 'mod-css1',
+        title: 'Module 1: CSS Foundations & Responsive Layouts',
+        duration: '6h 00m',
+        lessons: [
+          {
+            id: 'les-css101',
+            title: '1.1 CSS Selectors, Cascade, Specificity & Box Model',
+            videoTitle: 'CSS Tutorial - Zero to Hero (Complete Course)',
+            duration: '26:15',
+            durationSeconds: 1575,
+            videoUrl: 'https://www.youtube.com/watch?v=1PnVor36_40',
+            youtubeVideoId: '1PnVor36_40',
+            youtubeUrl: 'https://www.youtube.com/watch?v=1PnVor36_40',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Cascade, Specificity & Box-Sizing: Border-Box',
+            videoThumbnail: 'https://img.youtube.com/vi/1PnVor36_40/hqdefault.jpg',
+            description: 'Understand how CSS calculates selector weights and prevents layout blowouts using box-sizing: border-box.',
+            notes: 'Inline styles > ID selectors > Class selectors > Element selectors.',
+          },
+          {
+            id: 'les-css102',
+            title: '1.2 Flexbox, CSS Grid & Responsive Breakpoints',
+            videoTitle: 'CSS Crash Course For Absolute Beginners',
+            duration: '32:40',
+            durationSeconds: 1960,
+            videoUrl: 'https://www.youtube.com/watch?v=yfoY53QXEnI',
+            youtubeVideoId: 'yfoY53QXEnI',
+            youtubeUrl: 'https://www.youtube.com/watch?v=yfoY53QXEnI',
+            isVerifiedVideo: true,
+            channelTitle: 'Traversy Media',
+            videoTopic: 'Flexbox, Grid & Media Queries',
+            videoThumbnail: 'https://img.youtube.com/vi/yfoY53QXEnI/hqdefault.jpg',
+            description: 'Create fluid column layouts, card grids, and mobile-adaptive navigation headers.',
+            notes: 'CSS Grid handles two-dimensional layouts (rows & cols), while Flexbox excels at one dimension.',
+          },
+          {
+            id: 'les-css103',
+            title: '1.3 Modern Flexbox Deep Dive & Alignment',
+            videoTitle: 'Learn Flexbox the easy way - Complete CSS Guide',
+            duration: '25:10',
+            durationSeconds: 1510,
+            videoUrl: 'https://www.youtube.com/watch?v=u044iM9xsWU',
+            youtubeVideoId: 'u044iM9xsWU',
+            youtubeUrl: 'https://www.youtube.com/watch?v=u044iM9xsWU',
+            isVerifiedVideo: true,
+            channelTitle: 'Kevin Powell',
+            videoTopic: 'Flex Direction, Justify-Content & Align-Items',
+            videoThumbnail: 'https://img.youtube.com/vi/u044iM9xsWU/hqdefault.jpg',
+            description: 'Master main and cross axis alignment without fighting unexpected browser margin collapsing.',
+            notes: 'flex: 1 1 auto allows items to grow and shrink proportionally.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 6. JavaScript Programming & Modern ES6+
+  {
+    id: 'course-js',
+    title: 'JavaScript Programming & Modern ES6+',
+    slug: 'javascript-mastery',
+    instructor: {
+      name: 'Priyanka Sen',
+      title: 'Principal JavaScript Engineer & Tech Lead',
+      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+      rating: 4.95,
+    },
+    rating: 4.92,
+    studentsCount: 5400,
+    duration: '36 Hours',
+    difficulty: 'Intermediate',
+    category: 'Programming',
+    thumbnail: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=800&auto=format&fit=crop&q=80',
+    description: 'Master core JavaScript: Call Stack, Event Loop, Closures, Prototypes, ES6+ features, Async/Await, and browser DOM manipulation.',
+    overview: 'The essential language of modern full stack development. Understand single-threaded event loop execution, promises, asynchronous operations, array methods, and building interactive web apps.',
+    learningObjectives: [
+      'Variables: let, const, var, hoisting, and temporal dead zone (TDZ)',
+      'Functions: Arrow functions, higher-order functions, and closures',
+      'Asynchronous JS: Event Loop, Microtask Queue, Promises & Async/Await',
+      'Modern ES6+: Destructuring, Spread/Rest, Modules, and Optional Chaining',
+      'DOM events, event delegation, and building frontend widgets'
+    ],
+    prerequisites: ['HTML and basic CSS knowledge'],
+    totalLessons: 3,
+    modules: [
+      {
+        id: 'mod-js1',
+        title: 'Module 1: JavaScript Core & Asynchronous Execution',
+        duration: '7h 30m',
+        lessons: [
+          {
+            id: 'les-js101',
+            title: '1.1 JavaScript Basics, Variables, Scope & DOM Manipulation',
+            videoTitle: 'JavaScript Tutorial for Beginners: 30-Minute Crash Course',
+            duration: '31:00',
+            durationSeconds: 1860,
+            videoUrl: 'https://www.youtube.com/watch?v=W6NZfCO5SIk',
+            youtubeVideoId: 'W6NZfCO5SIk',
+            youtubeUrl: 'https://www.youtube.com/watch?v=W6NZfCO5SIk',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'JavaScript Fundamentals & Browser Interaction',
+            videoThumbnail: 'https://img.youtube.com/vi/W6NZfCO5SIk/hqdefault.jpg',
+            description: 'Learn variables, data types, DOM selector methods, and registering click events.',
+            notes: 'const prevents variable reassignment, but object properties can still be mutated.',
+          },
+          {
+            id: 'les-js102',
+            title: '1.2 Modern ES6+ Syntax, Promises, Async/Await & Fetch API',
+            videoTitle: 'JavaScript Programming - Full Course',
+            duration: '36:45',
+            durationSeconds: 2205,
+            videoUrl: 'https://www.youtube.com/watch?v=jS4aFq5-91M',
+            youtubeVideoId: 'jS4aFq5-91M',
+            youtubeUrl: 'https://www.youtube.com/watch?v=jS4aFq5-91M',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Promises, Async/Await & REST API Fetching',
+            videoThumbnail: 'https://img.youtube.com/vi/jS4aFq5-91M/hqdefault.jpg',
+            description: 'Fetch data from REST APIs, handle try/catch asynchronous errors, and unpack JSON payloads.',
+            notes: 'Async/await is syntactic sugar over native JavaScript Promises.',
+          },
+          {
+            id: 'les-js103',
+            title: '1.3 Prototypes, Closures & Event Loop Architecture',
+            videoTitle: 'JavaScript Full Course for free 🌐',
+            duration: '35:20',
+            durationSeconds: 2120,
+            videoUrl: 'https://www.youtube.com/watch?v=lfmg-EJ8gm4',
+            youtubeVideoId: 'lfmg-EJ8gm4',
+            youtubeUrl: 'https://www.youtube.com/watch?v=lfmg-EJ8gm4',
+            isVerifiedVideo: true,
+            channelTitle: 'Bro Code',
+            videoTopic: 'Closures, Lexical Scope & The Call Stack',
+            videoThumbnail: 'https://img.youtube.com/vi/lfmg-EJ8gm4/hqdefault.jpg',
+            description: 'Understand how closures preserve outer lexical scope and how the microtask queue executes promise callbacks.',
+            notes: 'Microtasks (Promises) always run before Macrotasks (setTimeout, setInterval).',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 7. React.js Frontend Architecture
+  {
+    id: 'course-react',
+    title: 'React.js Frontend Architecture & Hooks',
+    slug: 'react-development',
+    instructor: {
+      name: 'Arjun Namboodiri',
+      title: 'Principal UI Architect & React Core Contributor',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+      rating: 4.96,
+    },
+    rating: 4.93,
+    studentsCount: 4800,
+    duration: '40 Hours',
+    difficulty: 'Intermediate',
+    category: 'Web Development',
+    thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=80',
+    description: 'Learn modern React 19: Functional Components, Hooks (useState, useEffect, useMemo, useCallback), Context API, and modular UI state.',
+    overview: 'Build high-performance, single-page web applications using the world’s most popular frontend framework. Master component trees, state lifting, custom hooks, and API integration.',
+    learningObjectives: [
+      'JSX syntax, components, props passing, and conditional rendering',
+      'State management with useState and lifting state up',
+      'Side effects and API synchronization using useEffect',
+      'Performance optimization: useMemo, useCallback, and React.memo',
+      'Context API for global theme and authentication state'
+    ],
+    prerequisites: ['JavaScript ES6+ proficiency'],
+    totalLessons: 3,
+    modules: [
+      {
+        id: 'mod-react1',
+        title: 'Module 1: React Foundations & Core Hooks',
+        duration: '8h 00m',
+        lessons: [
+          {
+            id: 'les-react101',
+            title: '1.1 React Components, JSX, Props & State with useState',
+            videoTitle: "React Course - Beginner's Tutorial for React JavaScript Library",
+            duration: '32:10',
+            durationSeconds: 1930,
+            videoUrl: 'https://www.youtube.com/watch?v=bMknfKXIFA8',
+            youtubeVideoId: 'bMknfKXIFA8',
+            youtubeUrl: 'https://www.youtube.com/watch?v=bMknfKXIFA8',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'React Architecture, Virtual DOM & useState Hook',
+            videoThumbnail: 'https://img.youtube.com/vi/bMknfKXIFA8/hqdefault.jpg',
+            description: 'Understand Virtual DOM reconciliation, create reusable UI components, and manage component state.',
+            notes: 'Never mutate state directly in React; always use setter functions or state dispatchers.',
+          },
+          {
+            id: 'les-react102',
+            title: '1.2 useEffect Hook, API Integration & Component Lifecycle',
+            videoTitle: 'React Tutorial for Beginners - Building Modern Web Apps',
+            duration: '28:40',
+            durationSeconds: 1720,
+            videoUrl: 'https://www.youtube.com/watch?v=SqcY0GlETPk',
+            youtubeVideoId: 'SqcY0GlETPk',
+            youtubeUrl: 'https://www.youtube.com/watch?v=SqcY0GlETPk',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'Side Effects, Dependency Arrays & Cleanup Functions',
+            videoThumbnail: 'https://img.youtube.com/vi/SqcY0GlETPk/hqdefault.jpg',
+            description: 'Fetch backend data, synchronize browser window events, and implement proper cleanup handlers.',
+            notes: 'An empty dependency array [] executes the effect once when the component mounts.',
+          },
+          {
+            id: 'les-react103',
+            title: '1.3 Custom Hooks, Context API & State Management',
+            videoTitle: 'Learn React In 30 Minutes',
+            duration: '30:00',
+            durationSeconds: 1800,
+            videoUrl: 'https://www.youtube.com/watch?v=hQAHSlTtcmY',
+            youtubeVideoId: 'hQAHSlTtcmY',
+            youtubeUrl: 'https://www.youtube.com/watch?v=hQAHSlTtcmY',
+            isVerifiedVideo: true,
+            channelTitle: 'Web Dev Simplified',
+            videoTopic: 'Global Context, Custom Hooks & Clean Architecture',
+            videoThumbnail: 'https://img.youtube.com/vi/hQAHSlTtcmY/hqdefault.jpg',
+            description: 'Encapsulate reusable logic in custom hooks and manage app-wide auth state without prop drilling.',
+            notes: 'Custom hooks must always start with the "use" prefix to comply with React linting rules.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 8. Full Stack Web Development with React & Node
+  {
+    id: 'course-3',
+    title: 'Full Stack Web Development with React & Node',
+    slug: 'web-development',
+    instructor: {
+      name: 'Vikramaditya Singhania',
+      title: 'Full Stack Tech Lead & Open Source Contributor',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+      rating: 4.95,
+    },
+    rating: 4.9,
+    studentsCount: 5200,
+    duration: '54 Hours',
+    difficulty: 'Intermediate',
+    category: 'Web Development',
+    thumbnail: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop&q=80',
+    description: 'Build modern responsive full-stack web applications using HTML5, CSS3, Tailwind CSS, TypeScript, React 19, Express.js, and MongoDB.',
+    overview: 'Transform into a job-ready full stack web developer. Learn modern UI design, state management, REST API architecture, authentication, and deployment on modern cloud platforms.',
+    learningObjectives: [
+      'Master semantic HTML5, modern CSS3 layout (Flexbox & CSS Grid), and Tailwind CSS',
+      'Modern JavaScript ES6+ (Async/Await, Promises, Destructuring, Closures)',
+      'React architecture: Components, Hooks, Context, State Management',
+      'Backend REST API development with Express.js and Node',
+      'Database integration with MongoDB and PostgreSQL',
+      'Deploy production apps on Cloud Run and Vercel'
+    ],
+    prerequisites: ['Basic computer proficiency'],
+    totalLessons: 1,
+    modules: [
+      {
+        id: 'mod-w1',
+        title: 'Module 1: Modern Frontend & Tailwind CSS',
+        duration: '7h 10m',
+        lessons: [
+          {
+            id: 'les-w101',
+            title: '1.1 Modern Responsive Design with Flexbox, Grid & Tailwind CSS',
+            videoTitle: 'React & Modern Web Development Full Course',
+            duration: '28:10',
+            durationSeconds: 1690,
+            videoUrl: 'https://www.youtube.com/watch?v=bMknfKXIFA8',
+            youtubeVideoId: 'bMknfKXIFA8',
+            youtubeUrl: 'https://www.youtube.com/watch?v=bMknfKXIFA8',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Full Stack UI Construction & Tailwind Responsive Framework',
+            videoThumbnail: 'https://img.youtube.com/vi/bMknfKXIFA8/hqdefault.jpg',
+            description: 'Create pixel-perfect, mobile-first responsive layouts with utility-first Tailwind classes.',
+            notes: 'Always design mobile-first using min-width breakpoints in Tailwind.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 9. Data Structures & Algorithms in Depth (DSA)
+  {
+    id: 'course-4',
+    title: 'Data Structures & Algorithms in Depth',
+    slug: 'data-structures-algorithms',
+    instructor: {
+      name: 'Dr. Siddharth Sen',
+      title: 'ACM ICPC Finalist & Ex-FAANG Software Engineer',
+      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+      rating: 5.0,
+    },
+    rating: 4.95,
+    studentsCount: 6100,
+    duration: '60 Hours',
+    difficulty: 'Advanced',
+    category: 'Programming',
+    thumbnail: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80',
+    description: 'Crush technical coding interviews. Master Big-O notation, Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, and Backtracking.',
+    overview: 'The definitive DSA preparation course for college placement drives. Covers comprehensive standard interview problems asked in FAANG, TCS Digital, Infosys Power Programmer, and top product companies.',
+    learningObjectives: [
+      'Calculate time and space complexity with asymptotic analysis',
+      'Linear data structures: Arrays, Two-Pointer, Sliding Window, Linked Lists, Stacks, Queues',
+      'Non-linear data structures: Binary Trees, BSTs, Heaps, and Graphs',
+      'Advanced algorithm paradigms: Greedy, Divide and Conquer, Dynamic Programming',
+      'Graph algorithms: BFS, DFS, Dijkstra, Bellman-Ford, Kruskal, Prim',
+      'Systematic problem-solving framework for timed coding assessments'
+    ],
+    prerequisites: ['Proficiency in at least one language (C++, Java, or Python)'],
+    totalLessons: 4,
+    modules: [
+      {
+        id: 'mod-d1',
+        title: 'Module 1: Algorithmic Complexity & Arrays Patterns',
+        duration: '8h 00m',
+        lessons: [
+          {
+            id: 'les-d101',
+            title: '1.1 Time & Space Complexity (Big-O, Omega, Theta)',
+            videoTitle: 'Algorithms and Data Structures Tutorial - Full Course for Beginners',
+            duration: '31:20',
+            durationSeconds: 1880,
+            videoUrl: 'https://www.youtube.com/watch?v=8hly31xKli0',
+            youtubeVideoId: '8hly31xKli0',
+            youtubeUrl: 'https://www.youtube.com/watch?v=8hly31xKli0',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Asymptotic Analysis, Big-O & Amortized Runtime',
+            videoThumbnail: 'https://img.youtube.com/vi/8hly31xKli0/hqdefault.jpg',
+            description: 'Learn how to analyze nested loops, recursion trees, and amortized complexity.',
+            notes: 'Binary search runs in O(log N) time because it halves the search space each iteration.',
+          },
+          {
+            id: 'les-d102',
+            title: '1.2 Arrays, Two-Pointer Technique & Sliding Window Patterns',
+            videoTitle: '1. Algorithmic Thinking, Peak Finding - MIT 6.006',
+            duration: '36:10',
+            durationSeconds: 2170,
+            videoUrl: 'https://www.youtube.com/watch?v=ZA-tUyM_y7s',
+            youtubeVideoId: 'ZA-tUyM_y7s',
+            youtubeUrl: 'https://www.youtube.com/watch?v=ZA-tUyM_y7s',
+            isVerifiedVideo: true,
+            channelTitle: 'MIT OpenCourseWare',
+            videoTopic: 'Two-Pointer Technique & Subarray Optimization',
+            videoThumbnail: 'https://img.youtube.com/vi/ZA-tUyM_y7s/hqdefault.jpg',
+            description: 'Solve interview problems in O(n) instead of O(n^2) using forward-backward pointers and sliding windows.',
+            notes: 'Two-pointer requires sorted arrays or monotonically expanding bounds.',
+          }
+        ]
+      },
+      {
+        id: 'mod-d2',
+        title: 'Module 2: Linked Lists, Trees & Graph Algorithms',
+        duration: '10h 30m',
+        lessons: [
+          {
+            id: 'les-d201',
+            title: '2.1 Linked Lists, Stacks, Queues & Hash Tables',
+            videoTitle: 'Data Structures and Algorithms for Beginners',
+            duration: '34:45',
+            durationSeconds: 2085,
+            videoUrl: 'https://www.youtube.com/watch?v=BBpAmxU_NQo',
+            youtubeVideoId: 'BBpAmxU_NQo',
+            youtubeUrl: 'https://www.youtube.com/watch?v=BBpAmxU_NQo',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'Linear Abstract Data Types & Pointer Manipulation',
+            videoThumbnail: 'https://img.youtube.com/vi/BBpAmxU_NQo/hqdefault.jpg',
+            description: 'Master fast/slow pointer cycle detection, stack evaluation, and collision resolution.',
+            notes: 'Floyd’s cycle-finding algorithm detects loops in O(n) time and O(1) space.',
+          },
+          {
+            id: 'les-d301',
+            title: '2.2 Binary Trees, Graphs & Dynamic Programming Framework',
+            videoTitle: 'How to get good at LeetCode & DSA for Interviews',
+            duration: '39:20',
+            durationSeconds: 2360,
+            videoUrl: 'https://www.youtube.com/watch?v=KLlXCFG5TnA',
+            youtubeVideoId: 'KLlXCFG5TnA',
+            youtubeUrl: 'https://www.youtube.com/watch?v=KLlXCFG5TnA',
+            isVerifiedVideo: true,
+            channelTitle: 'NeetCode',
+            videoTopic: 'Tree Traversals, Graph BFS/DFS & DP Memoization',
+            videoThumbnail: 'https://img.youtube.com/vi/KLlXCFG5TnA/hqdefault.jpg',
+            description: 'Master tree traversals (inorder, preorder, postorder), topological sort, and optimal substructure DP memoization.',
+            notes: 'Break DP problems down: Define state, recurrence relation, base cases, and iteration order.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 10. Machine Learning & Predictive Modeling
+  {
+    id: 'course-5',
+    title: 'Machine Learning & Predictive Modeling',
+    slug: 'machine-learning',
+    instructor: {
+      name: 'Dr. Meera Nambiar',
+      title: 'Principal Data Scientist & IEEE Fellow',
+      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80',
+      rating: 4.85,
+    },
+    rating: 4.8,
+    studentsCount: 2900,
+    duration: '45 Hours',
+    difficulty: 'Intermediate',
+    category: 'Data Science',
+    thumbnail: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&auto=format&fit=crop&q=80',
+    description: 'Hands-on Machine Learning: Supervised learning, Unsupervised clustering, Feature engineering, Scikit-Learn, and model deployment pipelines.',
+    overview: 'Learn the mathematics and practical application of Machine Learning algorithms. Train models to predict trends, classify text, detect fraud, and build end-to-end data products.',
+    learningObjectives: [
+      'Data preprocessing, feature scaling, one-hot encoding, and imputation',
+      'Linear Regression, Logistic Regression, Decision Trees, and Random Forests',
+      'Support Vector Machines (SVM) and Gradient Boosting (XGBoost, LightGBM)',
+      'Unsupervised Learning: K-Means, Hierarchical Clustering, and PCA',
+      'Model evaluation metrics: Precision, Recall, F1-Score, ROC-AUC curve',
+      'Deploying ML models as REST API endpoints'
+    ],
+    prerequisites: ['Python basics and foundational linear algebra / calculus concepts'],
+    totalLessons: 3,
+    modules: [
+      {
+        id: 'mod-m1',
+        title: 'Module 1: Data Exploration & Supervised Algorithms',
+        duration: '7h 30m',
+        lessons: [
+          {
+            id: 'les-m101',
+            title: '1.1 Feature Engineering & Exploratory Data Analysis with Pandas & Seaborn',
+            videoTitle: 'Machine Learning for Everybody – Full Course',
+            duration: '26:40',
+            durationSeconds: 1600,
+            videoUrl: 'https://www.youtube.com/watch?v=i_LwzRVP7bg',
+            youtubeVideoId: 'i_LwzRVP7bg',
+            youtubeUrl: 'https://www.youtube.com/watch?v=i_LwzRVP7bg',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Exploratory Data Analysis & Feature Transformation',
+            videoThumbnail: 'https://img.youtube.com/vi/i_LwzRVP7bg/hqdefault.jpg',
+            description: 'Master data cleaning, outlier detection, distribution plotting, and correlation matrices.',
+            notes: 'Never fit data scalers on test data to avoid data leakage.',
+          },
+          {
+            id: 'les-m102',
+            title: '1.2 Supervised Learning: Regression, Trees & Random Forests',
+            videoTitle: 'Python Machine Learning Tutorial (Data Science)',
+            duration: '31:15',
+            durationSeconds: 1875,
+            videoUrl: 'https://www.youtube.com/watch?v=7eh4d6sabA0',
+            youtubeVideoId: '7eh4d6sabA0',
+            youtubeUrl: 'https://www.youtube.com/watch?v=7eh4d6sabA0',
+            isVerifiedVideo: true,
+            channelTitle: 'Programming with Mosh',
+            videoTopic: 'Classification, Regression & Ensemble Methods',
+            videoThumbnail: 'https://img.youtube.com/vi/7eh4d6sabA0/hqdefault.jpg',
+            description: 'Train Scikit-Learn classifiers, measure Gini impurity, and assemble bagging decision trees.',
+            notes: 'Random Forests reduce model variance through bootstrap aggregating (bagging).',
+          },
+          {
+            id: 'les-m201',
+            title: '1.3 Model Evaluation, Cross Validation & ROC-AUC Curves',
+            videoTitle: 'StatQuest: Machine Learning Fundamentals',
+            duration: '29:40',
+            durationSeconds: 1780,
+            videoUrl: 'https://www.youtube.com/watch?v=Gv9_4yMHFhI',
+            youtubeVideoId: 'Gv9_4yMHFhI',
+            youtubeUrl: 'https://www.youtube.com/watch?v=Gv9_4yMHFhI',
+            isVerifiedVideo: true,
+            channelTitle: 'StatQuest with Josh Starmer',
+            videoTopic: 'Confusion Matrix, Precision/Recall & Bias-Variance Tradeoff',
+            videoThumbnail: 'https://img.youtube.com/vi/Gv9_4yMHFhI/hqdefault.jpg',
+            description: 'Compute classification confusion matrices, tune hyperparameters with GridSearchCV, and prevent overfitting.',
+            notes: 'High bias implies underfitting; high variance implies overfitting.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 11. Natural Language Processing (NLP)
+  {
+    id: 'course-nlp',
+    title: 'Natural Language Processing (NLP) & Modern LLMs',
+    slug: 'nlp-mastery',
+    instructor: {
+      name: 'Dr. Alok Nath Mukherjee',
+      title: 'Lead AI Researcher & Author',
+      avatar: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&auto=format&fit=crop&q=80',
+      rating: 4.96,
+    },
+    rating: 4.91,
+    studentsCount: 3100,
+    duration: '38 Hours',
+    difficulty: 'Advanced',
+    category: 'AI & ML',
+    thumbnail: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80',
+    description: 'Learn NLP from text preprocessing (NLTK, SpaCy) and Word2Vec embeddings to modern Transformers, Attention Mechanisms, and Large Language Models.',
+    overview: 'Master computational linguistics and modern text analytics. Learn sentiment analysis, named entity recognition, vector databases, and how Transformer architectures power ChatGPT and Claude.',
+    learningObjectives: [
+      'Text normalization: Tokenization, Stopwords, Stemming & Lemmatization',
+      'Vector representation: Bag-of-Words, TF-IDF, Word2Vec, and GloVe',
+      'Recurrent Neural Networks (RNNs) vs LSTMs vs Transformer Attention',
+      'Hugging Face Transformers library, tokenizers, and pretrained models',
+      'Building semantic search and question-answering systems'
+    ],
+    prerequisites: ['Python proficiency and foundational Machine Learning knowledge'],
+    totalLessons: 3,
+    modules: [
+      {
+        id: 'mod-nlp1',
+        title: 'Module 1: Text Preprocessing & Vector Representations',
+        duration: '6h 30m',
+        lessons: [
+          {
+            id: 'les-nlp101',
+            title: '1.1 Text Preprocessing, Tokenization, Stemming & Lemmatization',
+            videoTitle: 'Python NLP Tutorial | Natural Language Processing with Python',
+            duration: '28:30',
+            durationSeconds: 1710,
+            videoUrl: 'https://www.youtube.com/watch?v=fNxaJsNG3-s',
+            youtubeVideoId: 'fNxaJsNG3-s',
+            youtubeUrl: 'https://www.youtube.com/watch?v=fNxaJsNG3-s',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Tokenization, Regex Cleaning & NLTK Pipelines',
+            videoThumbnail: 'https://img.youtube.com/vi/fNxaJsNG3-s/hqdefault.jpg',
+            description: 'Clean raw textual data, normalize casing, strip punctuation, and lemmatize inflectional endings.',
+            notes: 'Lemmatization uses lexical vocabulary and morphological analysis, whereas stemming cuts off word endings.',
+          },
+          {
+            id: 'les-nlp102',
+            title: '1.2 Word Embeddings, Word2Vec & TF-IDF Vectors',
+            videoTitle: 'Stanford CS224N: NLP with Deep Learning | Lecture 1 – Intro',
+            duration: '34:10',
+            durationSeconds: 2050,
+            videoUrl: 'https://www.youtube.com/watch?v=8rXD5-xhemo',
+            youtubeVideoId: '8rXD5-xhemo',
+            youtubeUrl: 'https://www.youtube.com/watch?v=8rXD5-xhemo',
+            isVerifiedVideo: true,
+            channelTitle: 'Stanford Online',
+            videoTopic: 'Vector Semantics, Cosine Similarity & Continuous Bag of Words',
+            videoThumbnail: 'https://img.youtube.com/vi/8rXD5-xhemo/hqdefault.jpg',
+            description: 'Map text to high-dimensional continuous vector spaces where semantic distances reflect linguistic meaning.',
+            notes: 'Word2Vec utilizes Skip-gram or CBOW architectures to learn semantic vector representations.',
+          },
+          {
+            id: 'les-nlp201',
+            title: '1.3 Transformers Architecture, Attention Mechanism & LLMs',
+            videoTitle: 'Complete NLP Playlist for Beginners - Transformers & Hugging Face',
+            duration: '38:40',
+            durationSeconds: 2320,
+            videoUrl: 'https://www.youtube.com/watch?v=M7SWr5xObkA',
+            youtubeVideoId: 'M7SWr5xObkA',
+            youtubeUrl: 'https://www.youtube.com/watch?v=M7SWr5xObkA',
+            isVerifiedVideo: true,
+            channelTitle: 'Krish Naik',
+            videoTopic: 'Self-Attention, Encoder-Decoder & Hugging Face Pipeline',
+            videoThumbnail: 'https://img.youtube.com/vi/M7SWr5xObkA/hqdefault.jpg',
+            description: 'Deconstruct Scaled Dot-Product Attention, positional encodings, and fine-tuning Hugging Face transformer models.',
+            notes: 'Attention allows models to dynamically weight relevant context across arbitrary token distances.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 12. Tech Resume Building & ATS Optimization
+  {
+    id: 'course-resume',
+    title: 'Tech Resume Building, ATS Optimization & Campus Portfolios',
+    slug: 'resume-building',
+    instructor: {
+      name: 'Rohan Sharma',
+      title: 'Senior Technical Talent Partner & Career Strategist',
+      avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+      rating: 4.97,
+    },
+    rating: 4.95,
+    studentsCount: 6500,
+    duration: '15 Hours',
+    difficulty: 'Beginner',
+    category: 'Career',
+    thumbnail: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&auto=format&fit=crop&q=80',
+    description: 'Learn the exact techniques to craft an ATS-passing software engineering resume, showcase coursework projects, and pass technical recruiter screening.',
+    overview: '90% of tech resumes are rejected by automated Applicant Tracking Systems before a human recruiter even sees them. Learn the anatomy of a winning engineering resume, keyword alignment, quantification formulas, and how to export clean PDFs directly through the EDUVIA platform.',
+    learningObjectives: [
+      'Master ATS parsing mechanics (Workday, Greenhouse, Lever, Taleo)',
+      'Action verb + Context + Quantified Impact formula (Google XYZ framework)',
+      'Structuring technical projects, GitHub links, and live deployment URLs',
+      'Highlighting coursework certificates and core skills without fluff',
+      'Tailoring your resume for campus placement drives and MNC hiring rounds'
+    ],
+    prerequisites: ['Completed at least one programming course or project'],
+    totalLessons: 3,
+    modules: [
+      {
+        id: 'mod-res1',
+        title: 'Module 1: ATS Architecture & Resume Blueprint',
+        duration: '5h 00m',
+        lessons: [
+          {
+            id: 'les-res101',
+            title: '1.1 ATS Formatting, Technical Resume Structure & Action Verbs',
+            videoTitle: 'Create Your Resume for Google: Tips and Advice',
+            duration: '22:15',
+            durationSeconds: 1335,
+            videoUrl: 'https://www.youtube.com/watch?v=BYUy1yHL43Q',
+            youtubeVideoId: 'BYUy1yHL43Q',
+            youtubeUrl: 'https://www.youtube.com/watch?v=BYUy1yHL43Q',
+            isVerifiedVideo: true,
+            channelTitle: 'Google Students',
+            videoTopic: 'ATS Formatting, Layout & High-Impact Bullets',
+            videoThumbnail: 'https://img.youtube.com/vi/BYUy1yHL43Q/hqdefault.jpg',
+            description: 'Learn how Google and top tech recruiters read college resumes, how ATS parsers tokenize data, and avoid rejection traps.',
+            notes: 'Avoid multi-column tables and non-standard fonts that break automated ATS text extraction.',
+          },
+          {
+            id: 'les-res102',
+            title: '1.2 Quantifying Engineering Projects, CGPA & GitHub Portfolios',
+            videoTitle: 'How to Write a Resume with No Experience (Step by Step Guide)',
+            duration: '25:40',
+            durationSeconds: 1540,
+            videoUrl: 'https://www.youtube.com/watch?v=y8YH0Qbu5h4',
+            youtubeVideoId: 'y8YH0Qbu5h4',
+            youtubeUrl: 'https://www.youtube.com/watch?v=y8YH0Qbu5h4',
+            isVerifiedVideo: true,
+            channelTitle: 'Jeff Su',
+            videoTopic: 'Project Bullets, Impact Metrics & Skill Showcases',
+            videoThumbnail: 'https://img.youtube.com/vi/y8YH0Qbu5h4/hqdefault.jpg',
+            description: 'Format project descriptions using the formula: Accomplished [X] measured by [Y] by doing [Z].',
+            notes: 'Numbers speak louder than adjectives: mention query response time improvements, test coverage %, or dataset sizes.',
+          },
+          {
+            id: 'les-res201',
+            title: '1.3 Keyword Optimization, Skills Section & Avoiding ATS Rejection',
+            videoTitle: 'How to write a killer tech resume | Tips from a Google recruiter',
+            duration: '24:10',
+            durationSeconds: 1450,
+            videoUrl: 'https://www.youtube.com/watch?v=yp693O87GmM',
+            youtubeVideoId: 'yp693O87GmM',
+            youtubeUrl: 'https://www.youtube.com/watch?v=yp693O87GmM',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Job Description Keyword Matching & ATS Optimization',
+            videoThumbnail: 'https://img.youtube.com/vi/yp693O87GmM/hqdefault.jpg',
+            description: 'Run our built-in Skill Gap Analysis and match your resume directly to company requirements before applying.',
+            notes: 'Sync your verified EDUVIA certificates directly into your PDF resume in one click.',
+          }
+        ]
+      }
+    ]
+  },
+
+  // 13. Computer Networks & Network Security
   {
     id: 'course-7',
     title: 'Computer Networks & Network Security',
@@ -457,7 +1243,7 @@ export const INITIAL_COURSES: Course[] = [
       'Network Security: Public Key Cryptography, Symmetric Ciphers, and SSL/TLS'
     ],
     prerequisites: ['Basic operating systems and computer hardware knowledge'],
-    totalLessons: 20,
+    totalLessons: 1,
     modules: [
       {
         id: 'mod-cn1',
@@ -467,25 +1253,23 @@ export const INITIAL_COURSES: Course[] = [
           {
             id: 'les-cn101',
             title: '1.1 OSI vs TCP/IP Models & Packet Encapsulation Lifecycle',
+            videoTitle: 'YouTube Search: Computer Networks OSI TCP IP Protocol Model Tutorial',
             duration: '22:30',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4',
+            durationSeconds: 1350,
+            videoUrl: 'https://www.youtube.com/results?search_query=Computer+Networks+OSI+TCP+IP+Protocol+Model+Tutorial',
+            youtubeSearchQuery: 'Computer Networks OSI TCP IP Protocol Model Tutorial',
+            isVerifiedVideo: false,
+            videoTopic: 'OSI vs TCP/IP Models & Packet Encapsulation Lifecycle',
+            videoThumbnail: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80',
             description: 'Trace how data travels from application layer headers down to physical layer electromagnetic signals.',
-            notes: 'Remember the acronym: Please Do Not Throw Sausage Pizza Away (Physical, Data Link, Network, Transport, Session, Presentation, Application).',
+            notes: 'Physical, Data Link, Network, Transport, Session, Presentation, Application.',
           }
         ]
       }
-    ],
-    reviews: [
-      {
-        id: 'rev-cn1',
-        userName: 'Deepak Mohan',
-        userAvatar: 'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '1 month ago',
-        comment: 'Crystal clear explanation of TCP 3-way handshake and subnetting calculations!',
-      }
     ]
   },
+
+  // 14. Artificial Intelligence & Generative Models
   {
     id: 'course-8',
     title: 'Artificial Intelligence & Generative Models',
@@ -513,7 +1297,7 @@ export const INITIAL_COURSES: Course[] = [
       'Building production AI applications and ethics in AI systems'
     ],
     prerequisites: ['Python proficiency and foundational probability/linear algebra'],
-    totalLessons: 26,
+    totalLessons: 1,
     modules: [
       {
         id: 'mod-ai1',
@@ -523,22 +1307,20 @@ export const INITIAL_COURSES: Course[] = [
           {
             id: 'les-ai101',
             title: '1.1 Intelligent Agents, State Space Search & A* Algorithm',
+            videoTitle: 'Artificial Intelligence Full Course | AI Tutorial for Beginners',
             duration: '27:50',
-            videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+            durationSeconds: 1670,
+            videoUrl: 'https://www.youtube.com/watch?v=JMUxmLgw-QU',
+            youtubeVideoId: 'JMUxmLgw-QU',
+            youtubeUrl: 'https://www.youtube.com/watch?v=JMUxmLgw-QU',
+            isVerifiedVideo: true,
+            channelTitle: 'freeCodeCamp.org',
+            videoTopic: 'Intelligent Agents, State Space Search & A* Algorithm',
+            videoThumbnail: 'https://img.youtube.com/vi/JMUxmLgw-QU/hqdefault.jpg',
             description: 'Evaluate admissible and consistent heuristics for optimal pathfinding in high-dimensional state spaces.',
             notes: 'A* is guaranteed to find an optimal solution if the heuristic h(n) is admissible (never overestimates the true cost).',
           }
         ]
-      }
-    ],
-    reviews: [
-      {
-        id: 'rev-ai1',
-        userName: 'Tanvi Agarwal',
-        userAvatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&auto=format&fit=crop&q=80',
-        rating: 5,
-        date: '4 days ago',
-        comment: 'The explanation of Transformer attention matrices is the best I have ever seen on any EdTech platform.',
       }
     ]
   }

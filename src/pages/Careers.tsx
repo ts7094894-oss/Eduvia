@@ -75,13 +75,13 @@ export const Careers: React.FC = () => {
       <div className="space-y-2">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-xs font-bold text-indigo-700 dark:text-indigo-300">
           <Briefcase className="w-3.5 h-3.5" />
-          <span>EduPath Direct Campus Placements</span>
+          <span>EDUVIA Campus Placements</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Explore Campus Job & Internship Drives
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-2xl">
-          Apply directly inside the EduPath portal with zero redirects. Your verified course credentials, quiz scores, and ATS resume are automatically submitted to hiring managers.
+          Apply directly inside the EDUVIA portal with zero redirects. Your verified course credentials, quiz scores, and ATS resume are automatically submitted to hiring managers.
         </p>
       </div>
 
@@ -101,7 +101,7 @@ export const Careers: React.FC = () => {
               </span>
             </div>
             <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
-              Auto-sync your completed EduPath coursework, verified digital certificates, and project portfolio into 4 recruiter-tested templates for higher shortlisting rates.
+              Auto-sync your completed EDUVIA coursework, verified digital certificates, and project portfolio into 4 recruiter-tested templates for higher shortlisting rates.
             </p>
           </div>
         </div>

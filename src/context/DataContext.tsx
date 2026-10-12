@@ -318,7 +318,23 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [courses, setCourses] = useState<Course[]>(() => {
     try {
       const stored = localStorage.getItem('eduvia_courses');
-      return stored ? JSON.parse(stored) : INITIAL_COURSES;
+      if (stored) {
+        const parsed: Course[] = JSON.parse(stored);
+        const merged = INITIAL_COURSES.map((initCourse) => {
+          const custom = parsed.find((p) => p.id === initCourse.id);
+          if (!custom) return initCourse;
+          return {
+            ...custom,
+            totalLessons: initCourse.totalLessons,
+            modules: initCourse.modules,
+          };
+        });
+        const extraCourses = parsed.filter(
+          (p) => !INITIAL_COURSES.some((ic) => ic.id === p.id)
+        );
+        return [...merged, ...extraCourses];
+      }
+      return INITIAL_COURSES;
     } catch {
       return INITIAL_COURSES;
     }

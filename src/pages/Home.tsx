@@ -41,18 +41,58 @@ export const Home: React.FC = () => {
   const featuredCourses = courses.slice(0, 4);
   const featuredJobs = jobs.slice(0, 4);
 
-  const stats = [
-    { label: 'Enrolled Students', value: '10,000+', icon: Users, sub: 'Active CSE learners' },
-    { label: 'Curated Courses', value: '500+', icon: BookOpen, sub: 'Industry-aligned curriculum' },
-    { label: 'Expert Mentors', value: '100+', icon: GraduationCap, sub: 'FAANG & Top Faculty' },
-    { label: 'Job Opportunities', value: '250+', icon: Briefcase, sub: 'Direct campus hiring' },
+  const exploreFeatures = [
+    {
+      id: 'skill-gap',
+      title: 'Skill Gap Analysis',
+      subtitle: 'Compare existing skills with job requirements',
+      description: 'Analyze your technical proficiencies against verified job requirements, identify missing competencies, and receive targeted recommendations.',
+      icon: TrendingUp,
+      color: 'from-blue-600 to-indigo-600',
+      badge: 'Skill Evaluation',
+      link: '/prep',
+      actionLabel: 'Analyze Skills',
+    },
+    {
+      id: 'learn-courses',
+      title: 'Learn Courses',
+      subtitle: 'Explore educational courses and verified learning videos',
+      description: 'Access curated computer science courses with HD video instruction, synchronized transcripts, AI scripts, chapters, and certificates.',
+      icon: BookOpen,
+      color: 'from-indigo-600 to-purple-600',
+      badge: 'Video Learning',
+      link: '/courses',
+      actionLabel: 'Explore Courses',
+    },
+    {
+      id: 'resume-builder',
+      title: 'Resume Builder',
+      subtitle: 'Create, edit, preview, and download job-specific resumes as PDFs',
+      description: 'Design ATS-optimized technical resumes with 1-click certificate sync, multiple recruiter-tested templates, and high-fidelity PDF export.',
+      icon: FileText,
+      color: 'from-purple-600 to-pink-600',
+      badge: 'ATS Optimized',
+      link: '/resume-builder',
+      actionLabel: 'Build Resume',
+    },
+    {
+      id: 'career-opportunities',
+      title: 'Career Opportunities',
+      subtitle: 'Explore job listings, eligibility requirements, and official application links',
+      description: 'Discover active campus recruitment drives, verify CGPA eligibility requirements, and submit direct job applications with complete tracking.',
+      icon: Briefcase,
+      color: 'from-pink-600 to-rose-600',
+      badge: 'Direct Hiring',
+      link: '/careers',
+      actionLabel: 'View Opportunities',
+    },
   ];
 
   const steps = [
     {
       step: '01',
       title: 'Learn',
-      description: 'Join structured courses, watch HD video lessons, and download verified study notes curated by industry experts.',
+      description: 'Join structured courses, watch HD video lessons, and download verified study notes curated by faculty.',
       icon: BookOpen,
       color: 'from-blue-600 to-indigo-600',
     },
@@ -73,7 +113,7 @@ export const Home: React.FC = () => {
     {
       step: '04',
       title: 'Get Hired',
-      description: 'Search campus drives, apply directly inside EduPath without external redirects, and track interview calls.',
+      description: 'Search campus drives, apply directly inside EDUVIA without external redirects, and track interview calls.',
       icon: Briefcase,
       color: 'from-pink-600 to-rose-600',
     },
@@ -82,12 +122,12 @@ export const Home: React.FC = () => {
   const whyChooseUs = [
     {
       title: 'Unified EdTech + Placement Ecosystem',
-      description: 'No more jumping between learning platforms and job portals. Learn skills and apply for matching companies in the same tab.',
+      description: 'No more jumping between learning platforms and job portals. Learn skills and apply for matching companies in the same portal.',
       icon: Sparkles,
     },
     {
       title: 'In-Platform Job Applications',
-      description: 'Apply directly to TCS, Infosys, Wipro, and Deloitte campus drives with automatic profile and resume parsing.',
+      description: 'Apply directly to active campus hiring drives with automatic profile, coursework credentials, and resume parsing.',
       icon: CheckCircle2,
     },
     {
@@ -97,7 +137,7 @@ export const Home: React.FC = () => {
     },
     {
       title: 'Comprehensive Placement Prep',
-      description: 'Master Quantitative Aptitude, Logical Reasoning, Top 100 Technical Coding questions, and Mock HR interviews.',
+      description: 'Master Quantitative Aptitude, Logical Reasoning, Technical Coding questions, and Mock HR interviews.',
       icon: ShieldCheck,
     },
   ];
@@ -105,21 +145,21 @@ export const Home: React.FC = () => {
   const testimonials = [
     {
       name: 'Pooja Reddy',
-      role: 'Associate Software Engineer @ TCS (7.5 LPA)',
+      role: 'B.Tech CSE Graduate',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80',
-      comment: 'EduPath changed my college placement journey! I completed the Python and DSA masterclasses, built my resume on the portal, and applied directly for TCS Digital. Got selected in the first attempt!',
+      comment: 'EDUVIA streamlined my college placement journey! I completed the Python and DSA masterclasses, built my resume on the portal, and prepared thoroughly with targeted practice problems.',
     },
     {
       name: 'Venkata Sai Kumar',
-      role: 'Specialist Programmer @ Infosys (9.5 LPA)',
+      role: 'Information Technology Student',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80',
-      comment: 'The in-platform video player, interactive timed quizzes, and immediate application tracking gave me the edge during campus season. Truly a world-class platform.',
+      comment: 'The in-platform video player, interactive transcripts, and clear course roadmaps gave me structured direction throughout the semester.',
     },
     {
       name: 'Ananya Deshmukh',
-      role: 'Full Stack Engineer @ Accenture',
+      role: 'Software Engineering Student',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&auto=format&fit=crop&q=80',
-      comment: 'The single-click resume builder combined with real company drives makes EduPath the ultimate tool every engineering college needs.',
+      comment: 'The single-click resume builder combined with real verified credentials makes EDUVIA a comprehensive platform for CSE students.',
     },
   ];
 
@@ -142,7 +182,7 @@ export const Home: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.15]">
               Learn Without Limits with{' '}
               <span className="bg-gradient-to-r from-indigo-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-                EduPath
+                EDUVIA
               </span>
             </h1>
 
@@ -200,33 +240,67 @@ export const Home: React.FC = () => {
             </div>
           </div>
 
-          {/* Stats Bar */}
-          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {stats.map((stat, i) => {
-              const Icon = stat.icon;
-              return (
-                <div
-                  key={i}
-                  className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all text-center space-y-2 group"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 mx-auto flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                    {stat.value}
-                  </h3>
-                  <div>
-                    <p className="text-xs font-bold text-slate-700 dark:text-slate-300">{stat.label}</p>
-                    <p className="text-[11px] text-slate-400">{stat.sub}</p>
-                  </div>
-                </div>
-              );
-            })}
+          {/* Explore EDUVIA Section */}
+          <div className="mt-16 space-y-6">
+            <div className="text-center max-w-2xl mx-auto space-y-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/70 border border-indigo-200 dark:border-indigo-800/80 text-xs font-bold text-indigo-700 dark:text-indigo-300">
+                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                <span>Explore EDUVIA</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Integrated Learning & Career Platform
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+                Four core capabilities designed to guide engineering students from foundational learning to campus opportunities.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {exploreFeatures.map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <Link
+                    key={feature.id}
+                    to={feature.link}
+                    className="group bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:border-indigo-300 dark:hover:border-indigo-700/80 transition-all duration-300 flex flex-col justify-between space-y-4 hover:-translate-y-1"
+                  >
+                    <div className="space-y-3.5">
+                      <div className="flex items-center justify-between">
+                        <div className={`w-12 h-12 rounded-2xl bg-gradient-to-tr ${feature.color} text-white flex items-center justify-center shadow-md group-hover:scale-105 transition-transform`}>
+                          <Icon className="w-6 h-6" />
+                        </div>
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 group-hover:bg-indigo-50 dark:group-hover:bg-indigo-950 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                          {feature.badge}
+                        </span>
+                      </div>
+
+                      <div className="space-y-1">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                          {feature.title}
+                        </h3>
+                        <p className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">
+                          {feature.subtitle}
+                        </p>
+                      </div>
+
+                      <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+                        {feature.description}
+                      </p>
+                    </div>
+
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300">
+                      <span>{feature.actionLabel}</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 2. ABOUT EDUPATH SECTION (Required Section) */}
+      {/* 2. ABOUT EDUVIA SECTION (Required Section) */}
       <section id="about" className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-indigo-900/90 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 border border-indigo-800/60 shadow-xl relative overflow-hidden">
           <div className="absolute right-0 top-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -235,20 +309,20 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-indigo-200 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                <span>About EduPath</span>
+                <span>About EDUVIA</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
                 Learn. Grow. Get Hired.
               </h2>
               <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
-                EduPath is a modern learning and career platform designed to help students build skills, track their learning progress, earn certifications, prepare for placements, create professional resumes, and discover career opportunities — all in one place.
+                EDUVIA is a modern learning and career platform designed to help students build skills, track their learning progress, earn certifications, prepare for placements, create professional resumes, and discover career opportunities — all in one place.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10">
                   <BookOpen className="w-5 h-5 text-indigo-400 mb-1" />
                   <h4 className="text-xs font-bold text-white">Skill Building</h4>
-                  <p className="text-[11px] text-slate-300">500+ curated engineering courses</p>
+                  <p className="text-[11px] text-slate-300">{courses.length} curated engineering courses</p>
                 </div>
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10">
                   <Award className="w-5 h-5 text-amber-400 mb-1" />
@@ -258,15 +332,15 @@ export const Home: React.FC = () => {
                 <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10">
                   <Briefcase className="w-5 h-5 text-emerald-400 mb-1" />
                   <h4 className="text-xs font-bold text-white">Direct Hiring</h4>
-                  <p className="text-[11px] text-slate-300">250+ active campus placement drives</p>
+                  <p className="text-[11px] text-slate-300">{jobs.length} active campus placement drives</p>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-4 flex flex-col justify-center items-center lg:items-end gap-3 text-center lg:text-right">
               <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 w-full text-center space-y-2">
-                <span className="text-3xl font-black text-white">100%</span>
-                <p className="text-xs font-bold text-indigo-200">Integrated Platform</p>
+                <span className="text-2xl font-black text-white">Fully Integrated</span>
+                <p className="text-xs font-bold text-indigo-200">Unified Student Portal</p>
                 <p className="text-[11px] text-slate-300">Zero third-party redirects required</p>
               </div>
               <Link to="/about" className="w-full">
@@ -279,17 +353,17 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. HOW EDUPATH WORKS (4 STEPS) */}
+      {/* 3. HOW EDUVIA WORKS (4 STEPS) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
             Methodology
           </span>
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            How EduPath Works
+            How EDUVIA Works
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            A seamless four-step pipeline connecting student classroom learning with verified corporate hiring drives.
+            A structured four-step pipeline connecting student classroom learning with verified corporate hiring drives.
           </p>
         </div>
 
@@ -343,7 +417,7 @@ export const Home: React.FC = () => {
 
           <Link to="/courses">
             <Button variant="outline" size="medium" rightIcon={<ArrowRight className="w-4 h-4" />}>
-              View All 500+ Courses
+              View All Courses
             </Button>
           </Link>
         </div>
@@ -355,7 +429,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. WHY CHOOSE EDUPATH */}
+      {/* 5. WHY CHOOSE EDUVIA */}
       <section className="bg-gradient-to-b from-slate-100/70 to-slate-50 dark:from-slate-900/50 dark:to-slate-950 py-16 border-y border-slate-200/80 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -365,10 +439,10 @@ export const Home: React.FC = () => {
                 <span>The All-In-One Solution</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug">
-                Why Engineering Colleges & Students Choose EduPath
+                Why Engineering Students Choose EDUVIA
               </h2>
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                Traditional education keeps coursework, coding practice, and job applications disconnected. EduPath unites them into a single, high-performance platform designed specifically for CSE students and campus recruitment cells.
+                Traditional education keeps coursework, coding practice, and job applications disconnected. EDUVIA unites them into a single, high-performance platform designed specifically for CSE students and campus recruitment.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -398,7 +472,7 @@ export const Home: React.FC = () => {
                       E
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900 dark:text-white">EduPath Career Engine</h4>
+                      <h4 className="text-sm font-bold text-slate-900 dark:text-white">EDUVIA Career Engine</h4>
                       <p className="text-[11px] text-slate-400">Direct Campus Placement Integration</p>
                     </div>
                   </div>
@@ -413,22 +487,22 @@ export const Home: React.FC = () => {
                       <CheckCircle2 className="w-5 h-5 text-emerald-500" />
                       <div>
                         <p className="text-xs font-bold text-slate-900 dark:text-white">Python Masterclass Completed</p>
-                        <p className="text-[10px] text-slate-400">Grade: A+ (Distinction) • Verified</p>
+                        <p className="text-[10px] text-slate-400">Verified Curriculum Completion</p>
                       </div>
                     </div>
-                    <span className="text-xs font-mono font-bold text-indigo-600">100%</span>
+                    <span className="text-xs font-mono font-bold text-indigo-600">Verified</span>
                   </div>
 
                   <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <Briefcase className="w-5 h-5 text-blue-500" />
                       <div>
-                        <p className="text-xs font-bold text-slate-900 dark:text-white">TCS Digital Drive Match</p>
+                        <p className="text-xs font-bold text-slate-900 dark:text-white">Campus Placement Match</p>
                         <p className="text-[10px] text-slate-400">Skills match: Python, Java, SQL, DSA</p>
                       </div>
                     </div>
                     <span className="text-xs font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950 px-2 py-0.5 rounded-md">
-                      85% Match
+                      Eligible
                     </span>
                   </div>
 
@@ -437,7 +511,7 @@ export const Home: React.FC = () => {
                       <Sparkles className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                       <div>
                         <p className="text-xs font-bold text-indigo-950 dark:text-indigo-200">Interview Call Scheduled</p>
-                        <p className="text-[10px] text-indigo-700 dark:text-indigo-300">Technical Round on Sep 5, 2026</p>
+                        <p className="text-[10px] text-indigo-700 dark:text-indigo-300">Technical Round scheduled</p>
                       </div>
                     </div>
                     <Link to="/app/student/applications">
@@ -471,13 +545,13 @@ export const Home: React.FC = () => {
                 Built-in ATS Resume Builder for Engineering Students
               </h2>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
-                Create a high-impact, ATS-ready tech resume in minutes. Seamlessly import your verified EduPath course certificates, completed project repositories, and technical skills with one click.
+                Create a high-impact, ATS-ready tech resume in minutes. Seamlessly import your verified EDUVIA course certificates, completed project repositories, and technical skills with one click.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                  <span>1-Click EduPath Profile & Certificate Sync</span>
+                  <span>1-Click EDUVIA Profile & Certificate Sync</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 dark:text-slate-200">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
@@ -517,7 +591,7 @@ export const Home: React.FC = () => {
                     <span className="text-xs font-mono font-bold text-slate-500 ml-2">ats_resume_preview.pdf</span>
                   </div>
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 dark:bg-emerald-950 dark:text-emerald-400">
-                    95% ATS Score
+                    ATS Optimized
                   </span>
                 </div>
                 <div className="space-y-3 font-sans text-left">
@@ -555,13 +629,13 @@ export const Home: React.FC = () => {
               Featured Job & Internship Drives
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 max-w-lg">
-              Apply directly inside EduPath to premier technology employers with our one-click application engine.
+              Apply directly inside EDUVIA with our one-click application engine.
             </p>
           </div>
 
           <Link to="/careers">
             <Button variant="outline" size="medium" rightIcon={<ArrowRight className="w-4 h-4" />}>
-              Explore All 250+ Jobs
+              Explore All Opportunities
             </Button>
           </Link>
         </div>
@@ -640,17 +714,17 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. PLACEMENT SUCCESS & TESTIMONIALS */}
+      {/* 7. STUDENT STORIES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-            Proven Results
+            Student Experiences
           </span>
           <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Student Placement Success Stories
+            Student Learning & Career Stories
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Hear from engineering graduates who learned, certified, and got placed through EduPath.
+            Hear from engineering students who learned, certified, and built their careers with EDUVIA.
           </p>
         </div>
 
@@ -661,10 +735,9 @@ export const Home: React.FC = () => {
               className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-sm flex flex-col justify-between space-y-5"
             >
               <div className="space-y-3">
-                <div className="flex items-center gap-1 text-amber-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 text-xs font-semibold">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>Verified Learner</span>
                 </div>
                 <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed italic">
                   "{t.comment}"
@@ -703,10 +776,10 @@ export const Home: React.FC = () => {
               Ready to Advance Your Tech Career?
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
-              Join EduPath Today & Unlock Campus Opportunities
+              Join EDUVIA Today & Unlock Campus Opportunities
             </h2>
             <p className="text-sm sm:text-base text-indigo-100 leading-relaxed font-normal">
-              Whether you want to master Python and DSA, build an ATS-compliant resume, or apply directly for 250+ tech roles, EduPath is your launchpad.
+              Whether you want to master Python and DSA, build an ATS-compliant resume, or apply for tech roles, EDUVIA is your launchpad.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">

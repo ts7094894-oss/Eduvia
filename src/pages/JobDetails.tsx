@@ -127,8 +127,8 @@ export const JobDetails: React.FC = () => {
             <p className="font-bold text-rose-600 dark:text-rose-400 mt-0.5">{job.deadline}</p>
           </div>
           <div>
-            <p className="text-slate-400">Open Positions</p>
-            <p className="font-bold text-slate-900 dark:text-white mt-0.5">25 Openings</p>
+            <p className="text-slate-400">Application Mode</p>
+            <p className="font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">Direct Campus Application</p>
           </div>
         </div>
       </div>

@@ -134,7 +134,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       setIsSubmittedSuccess(true);
       toast.success(
         'Message Sent Successfully! 🎉',
-        'Thank you for contacting EduPath. Our team will get back to you soon.'
+        'Thank you for contacting EDUVIA. Our team will get back to you soon.'
       );
 
       // Reset form fields

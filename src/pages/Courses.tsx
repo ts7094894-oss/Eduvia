@@ -21,17 +21,18 @@ export const Courses: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sortBy, setSortBy] = useState<'popular' | 'rating' | 'newest'>('popular');
+  const [sortBy, setSortBy] = useState<'all' | 'lessons' | 'newest'>('all');
   const [onlyBookmarked, setOnlyBookmarked] = useState<boolean>(false);
 
   const categories = [
     'All',
     'Programming',
     'Web Development',
+    'Database',
     'Data Science',
     'AI & ML',
-    'Algorithms',
     'Networking',
+    'Career',
   ];
 
   const difficulties = ['All', 'Beginner', 'Intermediate', 'Advanced'];
@@ -59,9 +60,13 @@ export const Courses: React.FC = () => {
         return matchesCategory && matchesDifficulty && matchesSearch && matchesBookmark;
       })
       .sort((a, b) => {
-        if (sortBy === 'rating') return b.rating - a.rating;
+        if (sortBy === 'lessons') {
+          const aLessons = a.totalLessons || a.modules.reduce((acc, m) => acc + m.lessons.length, 0);
+          const bLessons = b.totalLessons || b.modules.reduce((acc, m) => acc + m.lessons.length, 0);
+          return bLessons - aLessons;
+        }
         if (sortBy === 'newest') return b.id.localeCompare(a.id);
-        return b.studentsCount - a.studentsCount; // default popular
+        return 0;
       });
   }, [
     courses,
@@ -152,8 +157,8 @@ export const Courses: React.FC = () => {
               onChange={(e) => setSortBy(e.target.value as any)}
               className="px-3 py-2.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             >
-              <option value="popular">Most Popular</option>
-              <option value="rating">Highest Rated</option>
+              <option value="all">Curated Order</option>
+              <option value="lessons">Most Lessons</option>
               <option value="newest">Recently Added</option>
             </select>
 

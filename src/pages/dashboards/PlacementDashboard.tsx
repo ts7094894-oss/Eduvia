@@ -19,18 +19,24 @@ import {
 export const PlacementDashboard: React.FC = () => {
   const { jobs, applications } = useData();
 
-  const branchStats = [
-    { branch: 'Computer Science & Eng (CSE)', eligible: 320, placed: 295, rate: 92 },
-    { branch: 'Information Technology (IT)', eligible: 180, placed: 158, rate: 87 },
-    { branch: 'Electronics & Comm (ECE)', eligible: 210, placed: 162, rate: 77 },
-    { branch: 'Artificial Intelligence & DS', eligible: 140, placed: 128, rate: 91 },
+  const totalDrives = jobs.length;
+  const totalApplications = applications.length;
+  const inReviewApplications = applications.filter(
+    (a) => a.status === 'under_review' || a.status === 'Under Review' || a.status === 'shortlisted' || a.status === 'Shortlisted'
+  ).length;
+  const fullTimeRoles = jobs.filter((j) => j.jobType === 'Full-time').length;
+
+  const statusCounts = [
+    { label: 'Submitted', count: applications.filter((a) => a.status === 'applied' || a.status === 'Applied').length, color: 'bg-blue-600' },
+    { label: 'In Review', count: applications.filter((a) => a.status === 'under_review' || a.status === 'Under Review').length, color: 'bg-amber-600' },
+    { label: 'Shortlisted', count: applications.filter((a) => a.status === 'shortlisted' || a.status === 'Shortlisted').length, color: 'bg-emerald-600' },
+    { label: 'Rejected', count: applications.filter((a) => a.status === 'rejected' || a.status === 'Rejected').length, color: 'bg-rose-600' },
   ];
 
-  const salaryBrackets = [
-    { range: 'Dream (> 20 LPA)', count: 48, pct: '8%' },
-    { range: 'Super Dream (10 - 20 LPA)', count: 184, pct: '30%' },
-    { range: 'Core / IT (6 - 10 LPA)', count: 260, pct: '42%' },
-    { range: 'Standard (4 - 6 LPA)', count: 120, pct: '20%' },
+  const workplaceCounts = [
+    { type: 'On-site Campus', count: jobs.filter((j) => j.workplaceType === 'On-site').length },
+    { type: 'Hybrid', count: jobs.filter((j) => j.workplaceType === 'Hybrid').length },
+    { type: 'Remote', count: jobs.filter((j) => j.workplaceType === 'Remote').length },
   ];
 
   return (
@@ -43,10 +49,10 @@ export const PlacementDashboard: React.FC = () => {
             <span>Training & Placement Cell (TPO)</span>
           </div>
           <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Institutional Placement Analytics & Drives
+            Institutional Placement Management & Drives
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-            Campus-wide recruitment performance, corporate partner visits, CTC distribution, and branch placement statistics.
+            Real-time management of active campus drives, student application submissions, and evaluation pipelines.
           </p>
         </div>
 
@@ -63,87 +69,88 @@ export const PlacementDashboard: React.FC = () => {
       {/* KPI Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <DashboardCard
-          title="Placement Rate"
-          value="88.2%"
-          icon={<TrendingUp className="w-6 h-6" />}
-          description="612 of 850 Eligible Placed"
-          trend="+5.4% YoY"
-          trendDirection="up"
-          accentColor="emerald"
-        />
-        <DashboardCard
-          title="Highest CTC Offered"
-          value="44.0 LPA"
-          icon={<Award className="w-6 h-6" />}
-          description="Amazon SDE-1 Direct Drive"
-          accentColor="amber"
-        />
-        <DashboardCard
-          title="Average CTC"
-          value="8.8 LPA"
-          icon={<DollarSign className="w-6 h-6" />}
-          description="Tier-1 Software Engineering"
+          title="Active Campus Drives"
+          value={totalDrives}
+          icon={<Briefcase className="w-6 h-6" />}
+          description="Verified hiring openings"
           accentColor="indigo"
         />
         <DashboardCard
-          title="Visiting Companies"
-          value="142"
+          title="Total Applications"
+          value={totalApplications}
+          icon={<Users className="w-6 h-6" />}
+          description="Student submissions"
+          accentColor="emerald"
+        />
+        <DashboardCard
+          title="Under Review"
+          value={inReviewApplications}
+          icon={<Award className="w-6 h-6" />}
+          description="Shortlisted / In Evaluation"
+          accentColor="amber"
+        />
+        <DashboardCard
+          title="Full-Time Roles"
+          value={fullTimeRoles}
           icon={<Building2 className="w-6 h-6" />}
-          description="Corporate Recruiting Partners"
+          description="Direct campus positions"
           accentColor="purple"
         />
       </div>
 
       {/* Analytics Breakdown Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Branch-wise Placement Matrix */}
+        {/* Application Status Pipeline */}
         <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-5">
           <div className="flex items-center justify-between">
             <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <BarChart3 className="w-5 h-5 text-indigo-600" />
-              Branch-wise Placement Statistics (2026 Batch)
+              Application Pipeline Distribution
             </h3>
           </div>
 
           <div className="space-y-4">
-            {branchStats.map((item) => (
-              <div key={item.branch} className="space-y-1.5 text-xs">
-                <div className="flex justify-between items-center">
-                  <span className="font-bold text-slate-800 dark:text-slate-200">{item.branch}</span>
-                  <span className="font-mono text-emerald-600 dark:text-emerald-400 font-bold">
-                    {item.placed}/{item.eligible} ({item.rate}%)
-                  </span>
+            {statusCounts.map((item) => {
+              const pct = totalApplications > 0 ? Math.round((item.count / totalApplications) * 100) : 0;
+              return (
+                <div key={item.label} className="space-y-1.5 text-xs">
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-slate-800 dark:text-slate-200">{item.label}</span>
+                    <span className="font-mono text-slate-600 dark:text-slate-400 font-bold">
+                      {item.count} {item.count === 1 ? 'Application' : 'Applications'} ({pct}%)
+                    </span>
+                  </div>
+                  <div className="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                    <div
+                      className={`${item.color} h-full rounded-full transition-all duration-500`}
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
                 </div>
-                <div className="w-full bg-slate-100 dark:bg-slate-800 h-2.5 rounded-full overflow-hidden">
-                  <div
-                    className="bg-indigo-600 h-full rounded-full transition-all duration-500"
-                    style={{ width: `${item.rate}%` }}
-                  />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
-        {/* CTC Package Distribution */}
+        {/* Workplace Distribution */}
         <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 rounded-3xl p-6 shadow-sm space-y-5">
           <h3 className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <DollarSign className="w-5 h-5 text-emerald-600" />
-            Salary Package (CTC) Brackets
+            <Building2 className="w-5 h-5 text-emerald-600" />
+            Drive Distribution by Workplace
           </h3>
 
-          <div className="grid grid-cols-2 gap-3">
-            {salaryBrackets.map((bracket) => (
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {workplaceCounts.map((wp) => (
               <div
-                key={bracket.range}
+                key={wp.type}
                 className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-slate-800 space-y-1 text-xs"
               >
-                <p className="text-slate-400">{bracket.range}</p>
+                <p className="text-slate-400">{wp.type}</p>
                 <p className="text-xl font-extrabold text-slate-900 dark:text-white">
-                  {bracket.count} Offers
+                  {wp.count} {wp.count === 1 ? 'Drive' : 'Drives'}
                 </p>
                 <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">
-                  {bracket.pct} of total placements
+                  {totalDrives > 0 ? Math.round((wp.count / totalDrives) * 100) : 0}% of catalog
                 </span>
               </div>
             ))}
@@ -182,7 +189,9 @@ export const PlacementDashboard: React.FC = () => {
                     <td className="p-4 font-bold text-emerald-600">{job.salary}</td>
                     <td className="p-4">{job.eligibilityCgpa}+ CGPA</td>
                     <td className="p-4 text-rose-600 font-medium">{job.deadline}</td>
-                    <td className="p-4 font-bold text-indigo-600">42 Students</td>
+                    <td className="p-4 font-bold text-indigo-600">
+                      {applications.filter((a) => a.jobId === job.id).length} Applicants
+                    </td>
                     <td className="p-4 text-right">
                       <Button size="small" variant="ghost">
                         Manage Drive

@@ -55,7 +55,7 @@ export const Logo: React.FC<LogoProps> = ({
       <div className="flex flex-col">
         <div className="flex items-center leading-none">
           <span className={`bg-gradient-to-r from-slate-950 via-indigo-950 to-blue-900 dark:from-white dark:via-slate-100 dark:to-indigo-200 bg-clip-text text-transparent ${current.title}`}>
-            EduPath
+            EDUVIA
           </span>
           <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400 ml-0.5 inline-block"></span>
         </div>

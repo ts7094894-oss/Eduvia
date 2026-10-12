@@ -99,7 +99,7 @@ export const Login: React.FC = () => {
         <div className="text-center space-y-2">
           <Logo size="large" />
           <h2 className="text-2xl font-black text-slate-900 dark:text-white pt-2">
-            Welcome back to EduPath
+            Welcome back to EDUVIA
           </h2>
           <p className="text-xs text-slate-500 dark:text-slate-400">
             Sign in to continue learning, manage placements, or hire engineers.
@@ -210,7 +210,7 @@ export const Login: React.FC = () => {
             isLoading={isLoading}
             rightIcon={<ArrowRight className="w-4 h-4" />}
           >
-            Sign In to EduPath
+            Sign In to EDUVIA
           </Button>
         </form>
 

@@ -92,6 +92,9 @@ export const RecruiterDashboard: React.FC = () => {
     setSelectedApp(null);
   };
 
+  const inReviewCount = applications.filter((a) => a.status === 'under_review' || a.status === 'Under Review').length;
+  const shortlistedCount = applications.filter((a) => a.status === 'shortlisted' || a.status === 'Shortlisted').length;
+
   return (
     <div className="space-y-8 pb-20 max-w-7xl mx-auto">
       {/* Header */}
@@ -136,17 +139,17 @@ export const RecruiterDashboard: React.FC = () => {
           accentColor="emerald"
         />
         <DashboardCard
-          title="Interviews Set"
-          value="18"
-          icon={<Calendar className="w-6 h-6" />}
-          description="Scheduled this week"
+          title="In Review"
+          value={inReviewCount}
+          icon={<Clock className="w-6 h-6" />}
+          description="Pending evaluation"
           accentColor="purple"
         />
         <DashboardCard
-          title="Offers Extended"
-          value="12"
+          title="Shortlisted"
+          value={shortlistedCount}
           icon={<CheckCircle2 className="w-6 h-6" />}
-          description="Selected candidates"
+          description="Selected for next round"
           accentColor="amber"
         />
       </div>

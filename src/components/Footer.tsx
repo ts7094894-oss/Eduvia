@@ -35,18 +35,18 @@ export const Footer: React.FC = () => {
               Learn. Grow. Get Hired.
             </p>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              EduPath is a modern learning and career platform designed to help students build skills, track their learning progress, earn certifications, prepare for placements, create professional resumes, and discover career opportunities — all in one place.
+              EDUVIA is a modern learning and career platform designed to help students build skills, track their learning progress, earn certifications, prepare for placements, create professional resumes, and discover career opportunities — all in one place.
             </p>
 
             {/* Social Media Links */}
             <div className="pt-2">
-              <span className="text-[11px] font-bold text-slate-400 block mb-2">Connect with EduPath:</span>
+              <span className="text-[11px] font-bold text-slate-400 block mb-2">Connect with EDUVIA:</span>
               <div className="flex items-center gap-2.5">
                 <a
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   className="p-2.5 rounded-xl bg-slate-800/90 hover:bg-indigo-600 hover:text-white text-slate-300 transition-all border border-slate-700/60 shadow-xs focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  aria-label="EduPath on LinkedIn"
+                  aria-label="EDUVIA on LinkedIn"
                   title="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   className="p-2.5 rounded-xl bg-slate-800/90 hover:bg-pink-600 hover:text-white text-slate-300 transition-all border border-slate-700/60 shadow-xs focus:outline-none focus:ring-2 focus:ring-pink-500"
-                  aria-label="EduPath on Instagram"
+                  aria-label="EDUVIA on Instagram"
                   title="Instagram"
                 >
                   <Instagram className="w-4 h-4" />
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   className="p-2.5 rounded-xl bg-slate-800/90 hover:bg-red-600 hover:text-white text-slate-300 transition-all border border-slate-700/60 shadow-xs focus:outline-none focus:ring-2 focus:ring-red-500"
-                  aria-label="EduPath on YouTube"
+                  aria-label="EDUVIA on YouTube"
                   title="YouTube"
                 >
                   <Youtube className="w-4 h-4" />
@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   className="p-2.5 rounded-xl bg-slate-800/90 hover:bg-slate-700 hover:text-white text-slate-300 transition-all border border-slate-700/60 shadow-xs focus:outline-none focus:ring-2 focus:ring-slate-400"
-                  aria-label="EduPath on X/Twitter"
+                  aria-label="EDUVIA on X/Twitter"
                   title="X (Twitter)"
                 >
                   <Twitter className="w-4 h-4" />
@@ -170,7 +170,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs">
               <li>
                 <Link to="/about" className="text-slate-400 hover:text-indigo-400 transition-colors">
-                  About EduPath
+                  About EDUVIA
                 </Link>
               </li>
               <li>
@@ -213,10 +213,10 @@ export const Footer: React.FC = () => {
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-indigo-400 shrink-0" />
                 <a
-                  href="mailto:support@edupath.com"
+                  href="mailto:support@eduvia.com"
                   className="text-slate-300 hover:text-indigo-400 transition-colors truncate"
                 >
-                  support@edupath.com
+                  support@eduvia.com
                 </a>
               </div>
 
@@ -241,7 +241,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Section */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
-            <p className="font-medium text-slate-400">© 2026 EduPath. All Rights Reserved.</p>
+            <p className="font-medium text-slate-400">© 2026 EDUVIA. All Rights Reserved.</p>
             <span className="hidden sm:inline text-slate-700">•</span>
             <p className="font-semibold text-indigo-400">Learn. Grow. Get Hired.</p>
           </div>
@@ -273,26 +273,26 @@ export const Footer: React.FC = () => {
       <Modal
         isOpen={privacyModalOpen}
         onClose={() => setPrivacyModalOpen(false)}
-        title="EduPath — Privacy Policy"
+        title="EDUVIA — Privacy Policy"
       >
         <div className="space-y-4 text-xs text-slate-600 dark:text-slate-300 max-h-96 overflow-y-auto pr-2">
           <p className="font-semibold text-slate-900 dark:text-white">
             Last Updated: January 2026
           </p>
           <p>
-            Welcome to EduPath ("Learn. Grow. Get Hired."). We value your privacy and are committed to protecting the academic data, course completion records, and job application information of all students, faculty members, and recruiting partners.
+            Welcome to EDUVIA ("Learn. Grow. Get Hired."). We value your privacy and are committed to protecting the academic data, course completion records, and job application information of all students, faculty members, and recruiting partners.
           </p>
           <h4 className="font-bold text-slate-900 dark:text-white">1. Information We Collect</h4>
           <p>
-            We collect personal information such as full name, email address, academic credentials, enrolled course progress, submitted assignments, quiz assessment scores, and uploaded resume details when you use the EduPath learning and placement platform.
+            We collect personal information such as full name, email address, academic credentials, enrolled course progress, submitted assignments, quiz assessment scores, and uploaded resume details when you use the EDUVIA learning and placement platform.
           </p>
           <h4 className="font-bold text-slate-900 dark:text-white">2. Placement & Recruitment Data Sharing</h4>
           <p>
-            When you explicitly apply for a job or internship drive hosted on EduPath, your verified student profile and resume data are shared securely with the respective corporate recruiter for interview evaluation.
+            When you explicitly apply for a job or internship drive hosted on EDUVIA, your verified student profile and resume data are shared securely with the respective corporate recruiter for interview evaluation.
           </p>
           <h4 className="font-bold text-slate-900 dark:text-white">3. Contact Us</h4>
           <p>
-            If you have questions regarding this Privacy Policy, please contact our Data Governance desk at <strong className="text-indigo-600 dark:text-indigo-400">support@edupath.com</strong> or call <strong className="text-slate-900 dark:text-white">+91 98765 43210</strong>.
+            If you have questions regarding this Privacy Policy, please contact our Data Governance desk at <strong className="text-indigo-600 dark:text-indigo-400">support@eduvia.com</strong> or call <strong className="text-slate-900 dark:text-white">+91 98765 43210</strong>.
           </p>
         </div>
       </Modal>
@@ -301,26 +301,26 @@ export const Footer: React.FC = () => {
       <Modal
         isOpen={termsModalOpen}
         onClose={() => setTermsModalOpen(false)}
-        title="EduPath — Terms & Conditions"
+        title="EDUVIA — Terms & Conditions"
       >
         <div className="space-y-4 text-xs text-slate-600 dark:text-slate-300 max-h-96 overflow-y-auto pr-2">
           <p className="font-semibold text-slate-900 dark:text-white">
             Last Updated: January 2026
           </p>
           <p>
-            By accessing or using EduPath, you agree to be bound by these platform terms. EduPath provides academic learning management, coding labs, verified digital certification, and campus placement recruitment services.
+            By accessing or using EDUVIA, you agree to be bound by these platform terms. EDUVIA provides academic learning management, coding labs, verified digital certification, and campus placement recruitment services.
           </p>
           <h4 className="font-bold text-slate-900 dark:text-white">1. Academic Integrity & Honor Code</h4>
           <p>
-            Students must submit authentic coursework and complete quizzes without unauthorized assistance. Certificates issued on EduPath represent verified individual achievement.
+            Students must submit authentic coursework and complete quizzes without unauthorized assistance. Certificates issued on EDUVIA represent verified individual achievement.
           </p>
           <h4 className="font-bold text-slate-900 dark:text-white">2. Direct In-Platform Applications</h4>
           <p>
-            EduPath provides verified corporate placement listings. All interview rounds and recruitment communications are conducted in compliance with institutional guidelines.
+            EDUVIA provides verified corporate placement listings. All interview rounds and recruitment communications are conducted in compliance with institutional guidelines.
           </p>
           <h4 className="font-bold text-slate-900 dark:text-white">3. Platform Copyright</h4>
           <p>
-            © 2026 EduPath. All Rights Reserved. "Learn. Grow. Get Hired." is an official trademark.
+            © 2026 EDUVIA. All Rights Reserved. "Learn. Grow. Get Hired." is an official trademark.
           </p>
         </div>
       </Modal>

@@ -29,7 +29,7 @@ export const About: React.FC = () => {
             Home
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-slate-700 dark:text-slate-200">About EduPath</span>
+          <span className="text-slate-700 dark:text-slate-200">About EDUVIA</span>
         </div>
 
         <div className="space-y-2">
@@ -38,7 +38,7 @@ export const About: React.FC = () => {
             <span>About Our Mission</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
-            About EduPath
+            About EDUVIA
           </h1>
           <p className="text-base sm:text-lg text-indigo-600 dark:text-indigo-400 font-bold">
             Learn. Grow. Get Hired.
@@ -53,7 +53,7 @@ export const About: React.FC = () => {
             Empowering the Next Generation of Engineers & Leaders
           </h2>
           <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-            EduPath is a modern learning and career platform designed to help students build skills, track their learning progress, earn certifications, prepare for placements, create professional resumes, and discover career opportunities — all in one place.
+            EDUVIA is a modern learning and career platform designed to help students build skills, track their learning progress, earn certifications, prepare for placements, create professional resumes, and discover career opportunities — all in one place.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -135,10 +135,10 @@ export const About: React.FC = () => {
       <div className="bg-slate-100/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">
           <h4 className="text-lg font-bold text-slate-900 dark:text-white">
-            Have questions or want to partner with EduPath?
+            Have questions or want to partner with EDUVIA?
           </h4>
           <p className="text-xs text-slate-600 dark:text-slate-400">
-            Reach out to our campus desk in Chennai, Tamil Nadu, India • support@edupath.com
+            Reach out to our campus desk in Chennai, Tamil Nadu, India • support@eduvia.com
           </p>
         </div>
         <Link to="/contact">
